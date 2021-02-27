@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+::placeholder {
+    color: #6a6a6a;
+    opacity: 1;
+}
+
+body {
+    line-height: 1.2;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s;
+    overflow-y: auto !important;
+    margin: 0 !important;
+    overflow: hidden;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: inherit;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    transition: all 0.2s;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+    {
+    transition: all 0.2s;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: 0;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*Icons-linearicons START*/
+.info__inc {
+    z-index: 1;
+    position: relative;
+}
+
+.linearicons__music-note.linearicons__clapboard-play.linearicons__focus:before.linearicons__users:before {
+    z-index: 1;
+    padding-top: 3px;
+}
+
+/*Icons-linearicons END*/
+
+
+/*Background анимация START*/
+.bg-decor__thumb_l,
+.bg-decor__thumb_r {
+    animation-name: floating-s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating-s {
+
+    0%,
+    to {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%)
+    }
+
+    50% {
+        -webkit-transform: translateY(2%);
+        transform: translateY(2%)
+    }
+}
+
+@-webkit-keyframes floating-s {
+
+    0%,
+    to {
+        -webkit-transform: translateY(0%)
+    }
+
+    50% {
+        -webkit-transform: translateY(2%)
+    }
+}
+
+/*Background анимация END*/
+
+
+/*Аккордеон START*/
+.question__items {
+    margin: 0 auto;
+    padding: 0 0 7em 0;
+    max-width: 700px;
+    width: 100%;
+}
+
+.question__item {
+    background-color: #fff;
+    margin-top: 8px;
+    padding: 14px 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-box-shadow: 0 15px 35px 0 rgba(73, 74, 79, .18);
+    box-shadow: 0 15px 35px 0 rgba(73, 74, 79, .18);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.question__item_header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 48px;
+    position: relative;
+    padding-right: 30px;
+}
+
+.question__item_arrow {
+    background-image: url(../img/plus.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    width: 19px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.question__item_opened .question__item_arrow {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.question__item_title {
+    font-size: 17px;
+    line-height: 23px;
+    color: #111a2e;
+}
+
+.question__item_body {
+    display: none;
+}
+
+.question__item_answer {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width:1023px) {
+    .question__items {
+        padding-top: 20px;
+    }
+
+    .question__item {
+        margin: 15px auto 0;
+    }
+
+    .question__item_title {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .question__item {
+        margin-top: 15px;
+        padding: 12px 15px;
+    }
+
+    .question__item_header {
+        min-height: 35px;
+    }
+
+    .question__item_title {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .question__item {
+        margin-top: 15px;
+        padding: 7px 15px;
+    }
+
+    .question__item_arrow {
+        background-size: 10px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .question__item_title {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .question__item_answer {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+/*Аккордеон END*/
+
+

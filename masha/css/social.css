@@ -1,0 +1,17 @@
+/*Анимация элементов по страницу START*/
+.social-links:hover, .about__wrap img:hover, .icon-card:hover{
+  animation: headShake 1s ease-in-out;
+}
+
+.about__wrap, .lessons__text, .lessons__wrap,  .accordion{
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.info-block__set, .gallery-main__wrap  {
+  animation-name: fadeInUp;
+  animation-duration: 2s !important;
+  animation-timing-function: ease;
+}
+/*Анимация элементов по страницу END*/
