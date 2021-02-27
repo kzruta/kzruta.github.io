@@ -983,7 +983,9 @@ video {
     -webkit-align-items: center;
        -moz-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    position: relative;
+    z-index:0
 }
 .gallery-main__column-1{
     padding-top: 1.10em;
@@ -1089,7 +1091,7 @@ video {
 }
 .gallery-main__img-bg{
     position: absolute;
-    z-index: 0
+    z-index: -1
 }
 
 /* Footer */
@@ -1311,7 +1313,7 @@ video {
     top: -48px;
     width: 100%;
     height: 400px;
-    background: url(/img/form-bg.svg) repeat-x center top;
+    background: url(../img/form-bg.svg) repeat-x center top;
     -webkit-transform: rotate(180deg);
        -moz-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
@@ -1326,7 +1328,7 @@ video {
     /* top: 0 */;
     width: 100%;
     height: 425px;
-    background: url(/img/form-bg.svg) repeat-x center top;
+    background: url(../img/form-bg.svg) repeat-x center top;
     z-index: -2;
     bottom: -71px
 }

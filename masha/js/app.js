@@ -15,7 +15,9 @@ $(document).ready(function() {
     autoCenter : true
 	});
 
-
+	/*Анимация wow*/
+	$(".about__wrap, .info-block__set, .lessons__text, .lessons__wrap, .gallery-main__wrap, .accordion").addClass("wow");
+	
 	/*Модальное окно*/
 	$('[data-modal=consultation]').on("click", function(){
 			$('.overlay, #consultation').fadeIn('slow');
