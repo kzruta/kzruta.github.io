@@ -21,14 +21,16 @@ body {
     font-family: "Montserrat", sans-serif;
     background: #fff;
     padding: 0;
-    margin: 0;
     transition: all 0.2s;
     overflow-y: auto !important;
     margin: 0 !important;
-    overflow: hidden;
 
 }
 
+body, html {
+    overflow-x: hidden;
+    
+}
 
 h1,
 h2,

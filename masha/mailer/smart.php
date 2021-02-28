@@ -32,7 +32,6 @@ $mail->Subject = 'Данные';
 $mail->Body    = '
   Пользователь оставил данные <br>
 	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone . '<br>
 	E-mail: ' . $email . '';
 
 if(!$mail->send()) {
