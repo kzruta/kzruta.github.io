@@ -19,20 +19,6 @@ $(document).ready(function() {
 	$(".about__wrap, .info-block__set, .lessons__text, .lessons__wrap, .gallery-main__wrap, .accordion").addClass("wow");
 
 
-	/*Видео */
-	$(".video, .play").click( function(){
-    $url = $(this).data("url");
-    $('.video_mess .video-block').html($url);
-    $('.video_mess').fadeIn(200);
-    $('.fon-black').fadeIn(200);
-});
-
-	$(".clos, .overlay, .video_mess .clos").click(function(){
-		$('..fon-black').fadeOut(100);
-		$("body").css("overflow-y","scroll");
-		$('.video_mess').fadeOut(100);
-		$('.video_mess .video-block').html(" ");
-	});
 
 
 	/*Модальное окно*/
