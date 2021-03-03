@@ -1,8 +1,12 @@
 <?php
 
 $name = $_POST['name'];
-$phone = $_POST['phone'];
 $email = $_POST['email'];
+$message = $_POST['message'];
+$messageage = $_POST['messageage'];
+$radio1 = $_POST['radio1'];
+$radio2 = $_POST['radio2'];
+$radio3 = $_POST['radio3'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -11,15 +15,16 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'noreply@sonmlife.cf';                 // Наш логин
-$mail->Password = 'WRbr7Fxh9SASfFR';                           // Наш пароль от ящика
+$mail->Username = 'kolledzh-2017@mail.ru';                 // Наш логин
+$mail->Password = 'gruppabz12';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('noreply@sonmlife.cf', 'Filstroy');   // От кого письмо
-$mail->addAddress('info@sonmlife.cf');     // Add a recipient
+$mail->setFrom('kolledzh-2017@mail.ru', 'Аграрно-экономический колледж');   // От кого письмо/ 
+//Робот заходит под паролем на kolledzh-2017@mail.ru и пересылает на kzruta@gmail.com
+$mail->addAddress('kzruta@gmail.com');     // Add a recipient/ C
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -28,16 +33,22 @@ $mail->addAddress('info@sonmlife.cf');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
-$mail->Body    = '
-  Пользователь оставил данные <br>
-	Имя: ' . $name . ' <br>
-	E-mail: ' . $email . '';
 
-if(!$mail->send()) {
+$mail->Subject = '🔔 Заявка с сайта';
+$mail->Body    = '
+Пользователь оставил данные: <br><br>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Имя:</b> ' . $name . ' </td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">	 <b>E-mail:</b> ' . $email . ' </td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Взрослый/ребенок:</b> ' . $radio1 . ' </td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Возраст:</b> ' . $messageage . ' </td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Стиль:</b> ' . $radio2 . ' </td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Уровень знаний:</b> ' . $radio3 . '</td><tr>
+<tr><td style="background-color: #f8f8f8; padding: 15px;">  <b>Комментарий:</b> ' . $message . '</td></tr>';
+
+  if(!$mail->send()) {
     return false;
 } else {
     return true;
 }
-
 ?>
+
