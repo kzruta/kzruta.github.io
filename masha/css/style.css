@@ -2802,7 +2802,7 @@ label.error{
     /* Info-block */
 
     .info-block__thumb{
-        max-width: 70%
+        max-width: 60%
     }
     .info-block__box{
         width: 100%;
@@ -2963,7 +2963,7 @@ label.error{
     /* Info-block */
 
     .info-block__thumb{
-        max-width: 50%
+        max-width: 100%
     }
     
     /* Bg-decor */
