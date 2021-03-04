@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+    <link rel="stylesheet" href="break_files/core.css">
+    <link rel="stylesheet" href="break_files/text.css">
+    <link rel="stylesheet" href="break_files/profile.css">
+    <link rel="preload" as="script" href="break_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Перенос строк и&nbsp;слов - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+  </head><body>
+
+  <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Перенос строк и&nbsp;слов
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><h2>Перенос строки</h2><p>Это
+ в&nbsp;первую очередь вопрос семантики тегов, но&nbsp;раз речь идёт 
+о&nbsp;вёрстке текста, стоит поговорить про перенос строк. Иногда можно 
+увидеть материалы, в&nbsp;которых переносы строк размечены тегом <code>&lt;br&gt;</code>, это категорически неправильно. У&nbsp;этого тега нет функции семантического переноса (<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element" target="_blank" rel="nofollow noopener">о&nbsp;чём прямо сказано в&nbsp;спецификации</a>),
+ его задача&nbsp;— визуально отделить строки единого содержимого, как, 
+например, в&nbsp;случае со&nbsp;строками в&nbsp;стихе или адресом. Этот 
+тег вообще не&nbsp;следует использовать отдельно. И&nbsp;для увеличения 
+отступов&nbsp;— тоже. </p><pre><code class="html hljs xml"><span class="hljs-comment">&lt;!-- Тут всё нормально, это единый текст, в нём есть переносы строк --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Какой чудесный день, <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>какой чудесный пень, <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>какой чудесный я...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Два переноса — потому что красиво, когда после абзаца есть отступ. Но тут нужно было закрыть параграф и начать новый, потому что это новая мысль.  --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...Смотри, какой прекрасный день! Птички поют, весна. Пошли гулять в парк?<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>И вот мы идём, гуляем, и птички поют...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Это разные мысли, у них разные задачи. Переносить их так — не по спецификации --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Написать нам письмо <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> Адрес: наб. р. Карповки,...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><figure><img src="break_files/skill_add2_03.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_add2_03@2x.png 2x" alt="Первые 4 стиха заповеди Киплинга"><figcaption><span class="figurecaption-inside">Это хороший пример переносов тегом <code>&lt;br&gt;</code></span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Владей собой среди толпы смятенной,<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  Тебя клянущей за смятенье всех,<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  Верь сам в себя наперекор вселенной,<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  И маловерным отпусти их грех;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Редьярд Киплинг<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><figure><img src="break_files/skill_add2_04.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_add2_04@2x.png 2x" alt="Форма сбора персональных данных как антипример переноса строки"><figcaption><span class="figurecaption-inside">Это неправильный пример. Он&nbsp;напрашивается, но&nbsp;так переносить некорректно</span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"name"</span>&gt;</span>Имя<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Неопознанный енот"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"tel"</span>&gt;</span>Номер телефона<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"+7 987 654 32 10"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email"</span>&gt;</span>E-mail<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"unknown@raccoon.ru"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Отправить форму"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre><h2>Перенос слов</h2><p>Как правильно организовать перенос 
+длинных слов? Обычно в&nbsp;новости это не&nbsp;делается никак: 
+в&nbsp;самой новости строка переносится по&nbsp;словам, предусмотреть 
+все возможные разрешения экрана и&nbsp;виды страницы невозможно, проще 
+не&nbsp;заниматься переносом. А&nbsp;вот если у&nbsp;вас есть узкая 
+колонка, этот вопрос встаёт ребром.</p><p>Очень рекомендуется 
+на&nbsp;пробу в&nbsp;элементы вставлять тексты «любого размера», 
+то&nbsp;есть большие по&nbsp;объёму (в&nbsp;разы больше, чем 
+предполагается на&nbsp;первый взгляд). Это позволит оценить последствия 
+переполнений, вид фона, общую типографику.</p><p>Не&nbsp;рекомендуем разрешать перенос слов в&nbsp;ситуации переполнения текстом: нанесёт непоправимый вред смыслу.</p><p>Решение
+ о&nbsp;переносе слов в&nbsp;ситуации большого объёма текста (новость, 
+пост, статья…) стоит принимать, исходя из&nbsp;того, выравнивается текст
+ по&nbsp;ширине или&nbsp;нет. Если выравнивается&nbsp;— стоит включить 
+перенос слов, иначе пробелы между словами могут увеличиваться 
+до&nbsp;некомфортного для чтения размера. Но&nbsp;обычно читать текст 
+без выравнивания приятнее и&nbsp;удобнее, и&nbsp;в&nbsp;ситуации 
+«рваного» правого края перенос слов не&nbsp;нужен.</p><p>Для узких колонок, где некоторые слова наверняка не&nbsp;поместятся, было&nbsp;бы идеально использовать CSS-свойство <code>hyphens</code>. Со&nbsp;значением <code>auto</code>
+ оно использует браузерный словарь переносов и&nbsp;не&nbsp;калечит 
+слова. Но&nbsp;работает свойство, если посмотреть, только в&nbsp;<i>Firefox</i> (смотрите в&nbsp;<a href="https://caniuse.com/#search=hyphens" target="_blank" rel="nofollow noopener">CanIUse</a>; если что-то не&nbsp;работает в&nbsp;<i>Google Chrome</i>&nbsp;— считайте, бесполезно). </p><figure><img src="break_files/skill_text_method_14.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_14@2x.png 2x" alt="Как ведёт себя перенос слов в хроме и мозилле"><figcaption><span class="figurecaption-inside">Видно, как по-разному работает свойство <code>hyphens</code> в&nbsp;разных браузерах и&nbsp;почему его, к&nbsp;сожалению, нельзя использовать как основной метод переноса слов</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part1"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  На всех сайтах одно и то же: новости про карантин. Про то, как пережить изоляцию, как не потерять в деньгах, как не располнеть без спортзала...
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"second"</span>&gt;</span>
+  Наш девиз — человеконенавистничество.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Хорошо, если вас перевели на удалёнку. Там тихо, спокойно, холодильник и неизбежно появляется немного свободного времени — хотя бы пару часов в день, сэкономленные на дороге до офиса. Их можно потратить с пользой — например, научиться создавать простые веб-странички или научиться программировать. Это хорошая основа для новой профессии, особенно если вы давно поняли, что вам надоело работать по универской специальности много лет подряд и каждый день делать одно и то же.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  А могли и просто уволить, и ничего бы им за это не было.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.second</span> {
+  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">150px</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+
+  <b><span class="hljs-attribute">hyphens</span>: auto;</b>
+}
+</code></pre></div></div><p>Тег <code>&lt;wbr&gt;</code> несовершенен: он&nbsp;переносит слово в&nbsp;выбранном вами месте, но&nbsp;дефис (показатель переноса) не&nbsp;проставляет. </p><figure><img src="break_files/skill_text_method_15.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_15@2x.png 2x" alt="Перенос слов тегом  wbr "><figcaption><span class="figurecaption-inside">Тег <code>&lt;wbr&gt;</code> перенёс слово где нужно, но&nbsp;в&nbsp;русском языке принято ставить дефис при переносе</span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"second"</span>&gt;</span>
+  Наш девиз — человеконена<span class="hljs-tag">&lt;<span class="hljs-name">wbr</span>&gt;</span>вистничество.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><p>Свойство <code>word-break</code> можно применить хоть 
+ко&nbsp;всему сайту, но&nbsp;оно не&nbsp;учитывает грамматику, так что 
+слова будут переноситься ровно в&nbsp;том месте, где слово упёрлось 
+в&nbsp;границу контейнера.</p><p>Применили <code>word-break: break-all</code> ко&nbsp;всему тексту. </p><figure><img src="break_files/skill_text_method_16.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_16@2x.png 2x" alt="Ко всему тексту применено свойство переноса слов в конце строки, оно не учитывает грамматику и не ставит дефисы"><figcaption><span class="figurecaption-inside">Здесь показана работа свойства <code>word-break: break-all;</code> в&nbsp;отношении всего текста</span></figcaption></figure><pre><code class="css hljs"><span class="hljs-selector-tag">article</span> {
+  <span class="hljs-attribute">word-break</span>: break-all;
+}
+</code></pre><p>Существуют и&nbsp;другие свойства: <code>overflow-wrap: break-word</code>
+ переносит части слова, только если они не&nbsp;помещаются 
+в&nbsp;контейнер. То&nbsp;есть в&nbsp;примере про 
+человеконенавистничество слово начнётся с&nbsp;новой строки, 
+а&nbsp;потом уже то, что вообще в&nbsp;строку не&nbsp;поместилось, 
+перенесётся ещё&nbsp;раз. К&nbsp;сожалению, перенесётся без дефиса 
+и&nbsp;учёта грамматики.</p><p>Остаётся специальный символ-мнемоника ­<code>&amp;shy;</code>: он&nbsp;проставляет дефис, но&nbsp;годится этот символ только для единичных случаев, ведь его нужно проставлять вручную.</p><p>К&nbsp;сожалению,
+ раз в&nbsp;CSS нет универсального инструмента, то&nbsp;и&nbsp;выяснить 
+заранее, где нужно подставить «костыль» (не&nbsp;самое корректное, 
+но&nbsp;работающее решение)&nbsp;— почти невозможно. 
+Мы&nbsp;предпочитаем ограничивать количество мест, где перенос вообще 
+нужен, например, в&nbsp;боковых врезках.</p><p>Наш вывод: нужно либо использовать уже существующий типограф (подробнее об&nbsp;этом в&nbsp;разделе «<a href="typography.html">Типографика</a>»),
+ либо писать свой инструмент, который в&nbsp;словах длиннее, например, 
+пятнадцати символов, будет проставлять грамматически правильные <code>&amp;shy;</code>. Ещё можно вспоминать правила переносов (<a href="http://new.gramota.ru/biblio/readingroom/rules/141-perenos" target="_blank" rel="nofollow noopener">вот статья на&nbsp;Грамоте</a>),
+ сверяться с&nbsp;сайтами, которые уже сделали это для вас 
+(по&nbsp;запросу «словарь переносов слов» выпадает довольно много 
+словарей).</p><p>Если вы&nbsp;делаете переносы вручную&nbsp;— 
+постарайтесь не&nbsp;переносить по&nbsp;две буквы, лучше членить слово, 
+учитывая семантику.</p><pre><code class="html hljs xml"><span class="hljs-comment">&lt;!-- Не обязательно делать это так. Но так — можно, достаточно грамотно и не слишком мелко «нарезано» --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- *Одиннадцатиклассница получила неудовлетворительно и отправилась на водогрязеторфопарафинолечение от стресса.* --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Один<span class="hljs-symbol">&amp;shy;</span>надцати<span class="hljs-symbol">&amp;shy;</span>класс<span class="hljs-symbol">&amp;shy;</span>ница получила неудов<span class="hljs-symbol">&amp;shy;</span>ле<span class="hljs-symbol">&amp;shy;</span>тво<span class="hljs-symbol">&amp;shy;</span>ри<span class="hljs-symbol">&amp;shy;</span>тельно и отпра<span class="hljs-symbol">&amp;shy;</span>вилась на водо<span class="hljs-symbol">&amp;shy;</span>грязе<span class="hljs-symbol">&amp;shy;</span>торфо<span class="hljs-symbol">&amp;shy;</span>парафино<span class="hljs-symbol">&amp;shy;</span>лечение от стресса.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><div class="spoiler"><button class="spoiler__button" data-toggle="part2" data-toggle-class="spoiler__button--opened"><span>Замечание про рыб</span></button><div class="spoiler__content hidden" data-toggle-area="part2"><p>В&nbsp;таких
+ ситуациях почти всегда встаёт вопрос проверки. Как тестировать тот или 
+иной элемент, объект сайта? Текст из&nbsp;макета обычно невелик 
+и&nbsp;вряд&nbsp;ли это настоящий контент будущего сайта.</p><p>Для 
+того, чтобы понять, как на&nbsp;самом деле будет выглядеть дизайн, нужны
+ правдоподобные тексты: состоящие из&nbsp;слов разной длины, 
+со&nbsp;знаками препинания. В&nbsp;такой ситуации зачастую пишется 
+текст-плейсхолдер, и&nbsp;такие тексты называются «рыбами». Многие 
+используют классический текст-рыбу <i>«Lorem ipsum dolor sit amet, consectetur adipiscing elit,..»</i>,
+ но&nbsp;он&nbsp;не&nbsp;подходит, когда сайт русскоязычный, потому что 
+в&nbsp;русском языке по-другому работают правила типографики, другая 
+пунктуация, кавычки, в&nbsp;конце концов, в&nbsp;русском языке больше 
+средняя длина слов. </p><p>В&nbsp;«<a href="https://www.artlebedev.ru/backstage/fish/" target="_blank" rel="nofollow noopener">Ководстве</a>» Артемия Лебедева довольно точно сказано про рыб и&nbsp;про то, что каждая студия принимает свои методы работы с&nbsp;ними. </p><p>Мы&nbsp;считаем,
+ что по&nbsp;крайней мере в&nbsp;больших проектах было&nbsp;бы 
+правильнее использовать какую-то одну рыбу, чтобы потом было просто 
+найти все места, где она осталась после наполнения. Забытая 
+на&nbsp;сайте после релиза рыба может испортить всё настроение, особенно
+ если у&nbsp;вас есть привычка шутить в&nbsp;тестовых материалах. </p></div></div><p>Материал про переполнение текстом находится здесь: «<a href="overflow.html">Переполнение текстом, однострочное и&nbsp;многострочное</a>».</p></div></div></div></div></div></div>
+
+</body></html>

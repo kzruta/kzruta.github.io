@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+
+
+
+    <link rel="stylesheet" href="meta_files/core.css">
+    <link rel="stylesheet" href="meta_files/text.css">
+    <link rel="stylesheet" href="meta_files/profile.css">
+    <link rel="preload" as="script" href="meta_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Метаданные, дата, автор - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+
+  </head>
+  <body>
+
+
+   <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Метаданные, дата, автор
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><p>Зачастую
+ оформление тегов, информации об&nbsp;авторе, технические данные 
+о&nbsp;новости важны для правильного восприятия материала, например, 
+если автор известен, или у&nbsp;материала есть «срок годности». Обычно 
+метаданные получают из&nbsp;базы данных и&nbsp;из&nbsp;системы 
+управления контентом сайта, и&nbsp;вопрос их&nbsp;получения 
+мы&nbsp;рассматривать не&nbsp;будем. Наша задача&nbsp;— сверстать 
+их&nbsp;красиво и&nbsp;правильно.</p><p>Какие данные могут попасть 
+в&nbsp;«мета»? Информация об&nbsp;авторе, а&nbsp;именно имя 
+и&nbsp;ссылка на&nbsp;профиль или все материалы автора; информация 
+о&nbsp;дате создания, публикации и/или дате изменения материала; 
+количество просмотров; количество комментариев; теги; категория 
+материала. Из&nbsp;редко встречающегося&nbsp;— время прочтения; ключевые
+ слова…</p><p>Если таких данных довольно много и&nbsp;их&nbsp;нужно сгруппировать, можно объединить их&nbsp;в&nbsp;<code>&lt;footer&gt;</code>. Тег <code>&lt;footer&gt;</code>
+ семантически означает побочную информацию о&nbsp;контенте, 
+а&nbsp;не&nbsp;только буквально «подвал». Футеров на&nbsp;странице может
+ быть несколько, и&nbsp;они не&nbsp;обязательно должны находить внизу 
+страницы или секции. <a href="https://www.w3.org/TR/html52/sections.html#the-footer-element" target="_blank" rel="nofollow noopener">Спецификация тега <code>&lt;footer&gt;</code></a>.</p><p>Обязательное использование <code>&lt;footer&gt;</code>&nbsp;— не&nbsp;правило, а&nbsp;только дополнительная возможность структурировать данные.</p><figure><img src="meta_files/skill_text_method_31.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_31@2x.png 2x" alt="Метаданные материала в блоге html-академии: дата, время прочтения, количество просмотров, автор"><figcaption><span class="figurecaption-inside">Это метаданные в&nbsp;блоге Академии. Мы&nbsp;их&nbsp;переверстали</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part1"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-head"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('bg-image.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Туториал. Интерактивная SVG-диаграмма<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-value post-info-value-datetime"</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2020-03-27"</span>&gt;</span> 27 марта 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-value post-info-value-readtime"</span>&gt;</span>17 мин<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-info-value post-info-value-visits"</span>&gt;</span>4 275<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-tags"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Ссылка на тему"</span>&gt;</span>Фронтенд<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-author"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"author-text"</span>&gt;</span>Автор <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Саша Смыгина<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"author-pic"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"author-pic.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Портрет Саши Смыгиной"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Сейчас все активно обсуждают радости и гадости удалённой работы, и мы даже выпустили статью на эту тему. А ещё провели небольшой опрос и попросили наших пользователей рассказать, с какими трудностями они сталкиваются во время работы дома (спойлер — все ленятся). Статистику нужно как-то красиво оформить, так почему бы не сделать SVG-график? Заодно научимся чему-нибудь новому. Поехали!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-tag">article</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Muller"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5em</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">42px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">48px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+}
+
+<span class="hljs-selector-class">.post-head</span> {
+   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">320px</span>;
+   <span class="hljs-attribute">padding</span>: <span class="hljs-number">25px</span>;
+}
+
+<span class="hljs-selector-class">.meta</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span> <span class="hljs-number">25px</span>;
+
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f6f6f6</span>;
+}
+
+<span class="hljs-selector-class">.meta</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#302683</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+
+<span class="hljs-selector-class">.meta</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.meta</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-selector-class">.post-info</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-attribute">list-style</span>: none;
+}
+
+<span class="hljs-selector-class">.post-info-item</span> {
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">15px</span>;
+}
+
+<span class="hljs-selector-class">.post-info-value</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">5px</span>;
+
+  <span class="hljs-attribute">vertical-align</span>: middle;
+
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+}
+
+<span class="hljs-selector-class">.post-info-value-datetime</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"datetime.svg"</span>);
+}
+
+<span class="hljs-selector-class">.post-info-value-readtime</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"readtime.svg"</span>);
+}
+
+<span class="hljs-selector-class">.post-info-value-visits</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"visits.svg"</span>);
+}
+
+<span class="hljs-selector-class">.post-tags</span> {
+  <span class="hljs-attribute">margin-right</span>: auto;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">30px</span>;
+}
+
+<span class="hljs-selector-class">.post-author</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+}
+
+<span class="hljs-selector-class">.author-pic</span> {
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">15px</span>;
+}
+
+<span class="hljs-selector-class">.author-pic</span> <span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+}
+</code></pre></div></div><p>Зачастую метаданные новостей имеют вид ключа
+ и&nbsp;значения. Данные могут быть разделены на&nbsp;категории, 
+например, более подробная информация об&nbsp;авторе может размещаться 
+сбоку или ниже. Если метаданные состоят из&nbsp;ключа и&nbsp;значения, 
+уместно верстать их&nbsp;как список определений: <code>dl &gt; dt + dd</code> (подробнее в&nbsp;главе «<a href="https://htmlacademy.ru/courses/301">Разметка текста</a>»).</p><figure><img src="meta_files/skill_text_method_32.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_32@2x.png 2x" alt="Метаданные материала: автор, время, дата публикации"><figcaption><span class="figurecaption-inside">Так
+ может выглядеть довольно типичная подача сведений об&nbsp;авторе, 
+времени прочтения и&nbsp;дате публикации в&nbsp;формате ключ + значение</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part2" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part2"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Здание «Доминион» потрясающего архитектора Захи Хадид<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-item meta-item-author"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Автор<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Админ<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-item meta-item-reading-time"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Время на прочтение<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>3 мин<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-item meta-item-publish-date"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Опубликовано<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2019-11-12"</span>&gt;</span>2019-11-12<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.heading</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.13em</span>;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000000</span>;
+}
+
+<span class="hljs-selector-class">.meta</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#e5e5e5</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">20px</span>;
+
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+}
+
+<span class="hljs-selector-class">.meta-item</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">50px</span>;
+}
+
+<span class="hljs-selector-class">.meta-item</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">36px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">36px</span>;
+
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+}
+
+<span class="hljs-selector-class">.meta-item-author</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"author.svg"</span>);
+}
+
+<span class="hljs-selector-class">.meta-item-reading-time</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"reading-time.svg"</span>);
+}
+
+<span class="hljs-selector-class">.meta-item-publish-date</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"publish-date.svg"</span>);
+}
+
+<span class="hljs-selector-class">.meta</span> <span class="hljs-selector-tag">dt</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+}
+
+<span class="hljs-selector-class">.meta</span> <span class="hljs-selector-tag">dd</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#d90000</span>;
+}
+</code></pre></div></div><p>Также допустимо объединить метаинформацию с&nbsp;заголовком в&nbsp;начале статьи в&nbsp;теге <code>&lt;header&gt;</code>. Рассмотрим ещё один пример с&nbsp;объединением заголовка, контентной картинки и&nbsp;метаинформации.</p><figure><img src="meta_files/skill_text_method_add_01.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_add_01@2x.png?1 2x" alt="Метаданные материала: число комментариев, просмотров и лайков"><figcaption><span class="figurecaption-inside">Метаинформация сгруппирована в&nbsp;теге <code>&lt;header&gt;</code></span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part3" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part3"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"main-article"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"main-article-header"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"main-article-header-img"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"photo.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"960"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"309"</span>
+      <span class="hljs-attr">alt</span>=<span class="hljs-string">"Вид на горную деревню в Грузии"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container main-article-header-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tag"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Путешествия<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Путеводитель по Грузии: что стоит посмотреть в&nbsp;первую очередь<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-col"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta meta-views"</span>&gt;</span>1 479<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-col"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta meta-comments"</span>&gt;</span>72<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta-col"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meta meta-likes"</span>&gt;</span>938<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Итак, это произошло. Вы купили билеты, собрали чемоданы, возможно уже прилетели в страну и поняли, что не знаете куда сходить и что посмотреть. Не переживайте, сейчас во всём разберёмся.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">430px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">15px</span>;
+}
+
+<span class="hljs-selector-class">.main-article</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Georgia"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">13px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">20px</span>;
+
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.main-article-header</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">53px</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid transparent;
+
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+}
+
+<span class="hljs-selector-class">.main-article-header-content</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">22px</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">22px</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">32px</span>;
+
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0px</span> <span class="hljs-number">4px</span> <span class="hljs-number">16px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.15</span>);
+}
+
+<span class="hljs-selector-class">.main-article-header-img</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+
+<span class="hljs-selector-class">.heading</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Georgia"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">36px</span>;
+}
+
+<span class="hljs-selector-class">.tag</span> {
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.04em</span>;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+}
+
+<span class="hljs-selector-class">.tag</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: inherit;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+
+<span class="hljs-selector-class">.tag</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.tag</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-selector-class">.meta-row</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">32px</span> <span class="hljs-number">0</span> <span class="hljs-number">18px</span>;
+}
+
+<span class="hljs-selector-class">.meta-col</span> {
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-class">.meta</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">11px</span>;
+}
+
+<span class="hljs-selector-class">.meta</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">7px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">4px</span>;
+
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+}
+
+<span class="hljs-selector-class">.meta-date</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../img/calendar.svg"</span>);
+}
+
+<span class="hljs-selector-class">.meta-read-time</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../img/watch.svg"</span>);
+}
+
+<span class="hljs-selector-class">.meta-views</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../img/eye.svg"</span>);
+}
+</code></pre></div></div></div></div></div></div></div></div>
+
+</body></html>

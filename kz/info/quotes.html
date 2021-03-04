@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="quotes_files/core.css">
+    <link rel="stylesheet" href="quotes_files/text.css">
+    <link rel="stylesheet" href="quotes_files/profile.css">
+    <link rel="preload" as="script" href="quotes_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Цитаты - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+ 
+  </head>
+  <body>
+      <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Цитаты
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><h2>Семантическая вёрстка цитат</h2><p>Мы&nbsp;учим основам семантической вёрстки в&nbsp;главе «<a href="https://htmlacademy.ru/courses/301">Разметка текста</a>». </p><p>Семантическое значение цитаты&nbsp;— внешний контент, то&nbsp;есть <code>&lt;q&gt;</code>&nbsp;— это строчный элемент, содержащий материалы не&nbsp;уникальные, имеющие другой источник. А&nbsp;<code>&lt;blockquote&gt;</code>, соответственно, тег для выделенных, вынесенных в&nbsp;отдельную секцию цитат.</p><p>Цитата внутри текста может верстаться тегом <code>&lt;q&gt;</code>
+ и&nbsp;не&nbsp;выходит из&nbsp;абзаца. Такие цитаты могут быть выделены
+ другим начертанием. До&nbsp;и&nbsp;после содержимого тега <code>&lt;q&gt;</code> браузер автоматически проставляет кавычки подходящего для языка документа вида. Для русского языка проставляются <code>„лапки“</code> или <code>«ёлочки»</code>. Переопределить кавычки можно с&nbsp;помощью CSS-свойства <code>quotes</code>:</p><pre class="css"><code class="hljs">{
+  <span class="hljs-attribute">quotes</span>: <span class="hljs-string">"открывающая кавычка в юникоде"</span> <span class="hljs-string">"закрывающая кавычка в юникоде"</span>;
+}</code></pre><p>Вместо <code>&lt;q&gt;</code> можно просто использовать принятые на&nbsp;вашем сайте кавычки, <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element" target="_blank" rel="nofollow noopener">спецификация</a> разрешает&nbsp;это. Использовать <code>&lt;q&gt;</code> для контента, не&nbsp;являющегося цитатой (для сарказма или переводных слов, выделяющихся кавычками)&nbsp;— не&nbsp;семантично.</p><figure><img src="quotes_files/skill_text_method_17.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_17@2x.png 2x" alt="Цитата из Кастанеды внутри абзаца"><figcaption><span class="figurecaption-inside">Цитата встроена в&nbsp;абзац, наклон в&nbsp;источнике&nbsp;— по&nbsp;умолчанию, саму цитату мы&nbsp;выделили цветом</span></figcaption></figure><pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Но, как писал <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Кастанеда в «Учении дона Хуана»<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">q</span>&gt;</span>Страхи перед знанием — дело обычное; все мы им подвержены, и тут ничего не поделаешь. Однако каким бы устрашающим ни было учение, ещё страшней представить себе человека, у которого нет знания<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span>, и с этим сложно поспорить.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Georgia"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">28px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">46px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-tag">q</span> {
+  <span class="hljs-attribute">quotes</span>: <span class="hljs-string">"«"</span> <span class="hljs-string">"»"</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#744ce6</span>;
+}
+</code></pre><p>Мы&nbsp;же поговорим об&nbsp;отдельных и&nbsp;специальным образом оформленных цитатах. </p><p>Они оборачиваются в&nbsp;тег <code>&lt;blockquote&gt;</code>: это не&nbsp;только текстовый элемент, но&nbsp;и&nbsp;элемент для разметки секций (<a href="https://html.spec.whatwg.org/#the-blockquote-element" target="_blank" rel="nofollow noopener">спецификация</a>). Это означает, что у&nbsp;цитаты могут быть свои заголовки, хедер и&nbsp;футер и&nbsp;текстовые элементы.</p><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Про работу со&nbsp;спецификацией</span></button><div class="spoiler__content hidden" data-toggle-area="part1"><p>Про то, как работать со&nbsp;спецификацией, есть шорт «<a href="https://htmlacademy.ru/blog/boost/frontend/short-11">Спецификация W3C или WHATWG</a>». В&nbsp;целом ничего не&nbsp;изменилось, разве что в&nbsp;мае 2019 принято решение что актуальная спецификация будет в&nbsp;<a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener nofollow">html.spec.whatwg.org</a>.</p></div></div><p>У&nbsp;цитат есть своя специфика вёрстки. Например, есть атрибут <code>cite</code>, который также может выступать как тег <code>&lt;cite&gt;</code>,
+ оба применяются для указания источника (не&nbsp;только для 
+источника-сайта, но&nbsp;и&nbsp;для автора высказывания, для названия 
+произведения, ссылки на&nbsp;первоисточник). Атрибут <code>cite</code> нужен для соблюдения авторского права, визуально он&nbsp;не&nbsp;отображается:</p><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">"https://aldous-huxley.net"</span>&gt;</span>Если бы двери восприятия были чисты, все предстало бы человеку таким, как оно есть – бесконечным.<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><p>Вот пример оформленной цитаты:</p><figure><img src="quotes_files/skill_text_method_18.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_18@2x.png 2x" alt="Отдельная цитата из Игры престолов с подписью"><figcaption><span class="figurecaption-inside">Цитата сделана отдельным блоком, подпись обособлена, есть рамка слева</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part2" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part2"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Всякий человек нуждается в том, чтобы над ним иногда посмеялись. Иначе мы начинаем относится к себе слишком серьезно.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>«Игра престолов», Джордж Р. Мартин<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">4px</span> solid <span class="hljs-number">#e2e2e2</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Georgia"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">28px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">46px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: italic;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">28px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">46px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#aaaaaa</span>;
+}
+</code></pre></div></div><p>В&nbsp;случае, если это не&nbsp;цитата 
+в&nbsp;полном смысле слова, а&nbsp;акцентная мысль, более важное 
+предложение в&nbsp;потоке текста, будет правильнее верстать такую мысль 
+другими тегами, например, <code>&lt;p&gt;</code> и&nbsp;<code>&lt;strong&gt;</code> с&nbsp;классом, или <code>&lt;figure&gt;</code>. </p><pre><code class="html hljs xml">
+<span class="hljs-comment">&lt;!-- Тег &lt;strong&gt; означает что-то срочное, важное --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Каждый раз, когда мы размышляем о том, какой тег будет корректнее с точки зрения семантики, в Академии улыбается один наставник.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Читайте спецификацию, о еноты!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Тег &lt;figure&gt; означает некую автономную сущность внутри потока --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Иногда, встречаясь в спецификации с новым знанием, мы загораемся желанием применить именно его, это новое обретённое знание.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+  Сверяйтесь со спецификацией как можно чаще. Браузеры обрабатывают код по спеке, разработчики пишут код по спеке — и у нас всё вместе хорошо работает.
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Совет по работе со спецификациями<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+</code></pre><p>Это вопрос семантической вёрстки, 
+и&nbsp;мы&nbsp;считаем, что разделять цитаты (со&nbsp;внешним 
+источником) и&nbsp;акцентные мысли правильно и&nbsp;удобно для 
+пользователей и&nbsp;роботов. </p><h3>Цитата простая, незатейливая, без дополнительных элементов</h3><p>Самый
+ стандартный вариант оформления цитаты&nbsp;— «поиграть 
+со&nbsp;шрифтами». Например, укрупнённый шрифт, изменённый цвет, другое 
+начертание: курсив или полужирное. Возможно другое семейство шрифтов, 
+увеличенное межстрочное расстояние, возможно, все буквы будут прописные.
+ Обычно у&nbsp;подписи кегль меньше, а&nbsp;начертание контрастнее.</p><figure><img src="quotes_files/skill_text_method_19.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_19@2x.png 2x" alt="Цитата из царя Леонида про то, что сдаваться нельзя"><figcaption><span class="figurecaption-inside">Цитата встроена в&nbsp;абзац, наклон в&nbsp;источнике&nbsp;— по&nbsp;умолчанию, саму цитату мы&nbsp;выделили цветом</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part3" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part3"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Не сдаваться! Не отступать! Таков спартанский закон. И по этому спартанскому закону мы будем стоять! Воевать! Умирать! Наступает новая эра. Эра свободы! И все будут помнить, что три сотни спартанцев до последнего вздоха её защищали!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Царь Леонид<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">font-style</span>: italic;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">22px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#744ce6</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#aaaaaa</span>;
+}
+</code></pre></div></div><p>Второй по&nbsp;типичности&nbsp;— то&nbsp;же 
+самое, но&nbsp;в&nbsp;дополнение появляется обводка или&nbsp;фон. Фон 
+обычно неброский, просто заливка. Обводка может быть со&nbsp;всех 
+сторон, только слева, или сверху и&nbsp;снизу. </p><figure><img src="quotes_files/skill_text_method_21.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_21@2x.png 2x" alt="Цитата из текста Ницше"><figcaption><span class="figurecaption-inside">Цитата встроена в&nbsp;абзац и&nbsp;выделена рамками по&nbsp;бокам</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part4" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part4"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Самые ошибочные умозаключения людей суть следующие: вещь существует, следовательно, она имеет право на это.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>«Человеческое, слишком человеческое». Фридрих Ницше<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">740px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">8px</span> solid <span class="hljs-number">#d5d5d5</span>;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">8px</span> solid <span class="hljs-number">#d5d5d5</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Merriweather"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">27px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">50px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+</code></pre></div></div><h3>Обратный отступ</h3><p>Рассмотрим ещё один пример. Это вроде как цитата, но&nbsp;в&nbsp;данном контексте это акцентная мысль. Стоит подать именно так.</p><figure><img src="quotes_files/skill_text_method_20.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_20@2x.png 2x" alt="Акцентная мысль в тексте"><figcaption><span class="figurecaption-inside">Пример стилизации обратного отступа</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part5" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part5"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Сначала — неприятные задачи. В любой работе есть неприятные задачи — их всегда хочется отложить на потом. Нередко это самое «потом» наступает слишком поздно. Если задачу в принципе нельзя скипнуть, то лучше ей заняться в начале рабочего дня. Так вы не растеряете фокус и преждевременно не отправите задачу в очередь.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accent"</span>&gt;</span>
+    «Не имеет смысла нанимать толковых людей, а затем рассказать им, что делать; мы нанимаем умных людей, чтобы они могли рассказать нам, что делать». Так говорил Стив Джобс.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Если вдруг вы выполнили план на день буквально за несколько часов и у вас, по идее, куча свободного времени — это не значит, что рабочий день закончился. В это время можно заняться какими-то другими делами по работе, разобрать бэклог, или спросить у руководителя, что делать дальше.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">50px</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Merriweather"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">27px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.accent</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Roboto"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">44px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+</code></pre></div></div><h3>Цитата затейливая, с&nbsp;кавычками</h3><p>Зачастую
+ цитата оформляется с&nbsp;помощью акцентных кавычек, они могут быть 
+вставлены как символы шрифта или юникода, а&nbsp;могут&nbsp;— как 
+графика.</p><p>Опишем максимально «закрученную» цитату.</p><ul><li>В&nbsp;начале
+ ставятся укрупнённые открывающие кавычки по&nbsp;типу буквицы. Это 
+удобно, «дёшево» с&nbsp;точки зрения занимаемого места, абсолютно 
+очевидно для пользователя, может быть довольно красиво. Размер этих 
+кавычек и&nbsp;их&nbsp;расположение бывает очень оригинальным, 
+у&nbsp;них может измениться цвет и&nbsp;даже семейство шрифта. Или 
+их&nbsp;можно отрисовать и&nbsp;заверстать на&nbsp;сайт как графический 
+элемент. В&nbsp;примере ниже кавычка&nbsp;— это изначально символ шрифта
+ <i>Oranienbaum</i>, но&nbsp;мы&nbsp;её&nbsp;подключим отдельным 
+векторным изображением, чтобы не&nbsp;загружать весь шрифт ради одного 
+декоративного символа. </li></ul><figure><img src="quotes_files/skill_text_method_22.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_22@2x.png 2x" alt="Цитата из «Мастера и Маргариты» Булгакова"><figcaption><span class="figurecaption-inside">Цитата с&nbsp;укрупнённой открывающей кавычкой по&nbsp;типу буквицы</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part6" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part6"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Свежесть бывает только одна — первая, она же и последняя.
+А если осетрина второй свежести, то это значит, что она тухлая!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Воланд. Михаил Булгаков. «Мастер и Маргарита»<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">position</span>: relative;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Muller"</span>, <span class="hljs-string">"Open Sans"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">36px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">40px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">34px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">37px</span>;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"quote.svg"</span>) no-repeat <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+}
+</code></pre></div></div><ul><li>В&nbsp;оформлении появляется закрывающая кавычка. Или кавычка «переезжает» под текст. </li></ul><figure><img src="quotes_files/skill_text_method_23.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_23@2x.png 2x" alt="Отдельная цитата из Гарри Поттера"><figcaption><span class="figurecaption-inside">Цитата с&nbsp;целыми двумя открывающими кавычками</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part7" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part7"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Вовсе ты не плохой человек, ты очень хороший человек, с которым случилось много плохого, понимаешь? К тому же мир не разделён на плохих и хороших. В каждом есть и светлая и тёмная сторона. Главное то, какую выбрал ты. Это определяет всё.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"character"</span>&gt;</span>Сириус Блэк<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"author"</span>&gt;</span>«Гарри Поттер», Джоан Роулинг<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">50px</span> <span class="hljs-number">100px</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Vollkorn"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">46px</span>;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">13px</span>;
+
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">136px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">106px</span>;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"quote-big.svg"</span>) no-repeat <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">position</span>: relative;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">34px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">22px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">17px</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">30px</span>;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"quote-small.svg"</span>) no-repeat <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">position</span>: relative;
+
+  <span class="hljs-attribute">font-style</span>: italic;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">24px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-class">.character</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-class">.author</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#888888</span>;
+}
+</code></pre></div></div><ul><li>В&nbsp;оформлении цитаты может появиться обводка (выглядит как <code>&lt;legend&gt;</code>) или фоновая подложка, например, в&nbsp;виде мазка кисти, или паттерн, или декоративные полосы.</li></ul><figure><img src="quotes_files/skill_text_method_24.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_24@2x.png 2x" alt="Отдельная цитата из сериала Дарья"><figcaption><span class="figurecaption-inside">Цитата с&nbsp;фоновой подложкой и&nbsp;обводкой</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part8" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part8"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote-inner"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>У меня нет заниженной самооценки. Это ошибка. У&nbsp;меня заниженная оценка всех остальных.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Дарья. Сериал для MTV<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-tag">article</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f0c52e</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">100px</span> <span class="hljs-number">0</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Exo 2"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"back.png"</span>) no-repeat <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+}
+
+<span class="hljs-selector-class">.quote-inner</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">460px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::before</span>,
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">486px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">43px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-left</span>: auto;
+  <span class="hljs-attribute">margin-right</span>: auto;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"quote-border.svg"</span>) no-repeat <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-size</span>: <span class="hljs-number">486px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">180deg</span>);
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">40px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">17px</span>;
+
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">36px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+</code></pre></div></div></div></div></div></div></div></div>
+
+</body></html>

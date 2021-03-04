@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+    <link rel="stylesheet" href="lists_files/core.css">
+    <link rel="stylesheet" href="lists_files/text.css">
+    <link rel="stylesheet" href="lists_files/profile.css">
+    <link rel="preload" as="script" href="lists_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Списки - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+ 
+  </head>
+  <body>
+
+       <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Списки
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><p>В&nbsp;текстах
+ часто используются списки для структурирования контента. Про 
+их&nbsp;значение и&nbsp;использование&nbsp;— в&nbsp;главе «<a href="https://htmlacademy.ru/courses/301">Разметка текста</a>». Список позволяет сделать текст более удобным для чтения, выделить структуру мыслей и&nbsp;деталей. </p><p>Списки
+ бывают упорядоченные и&nbsp;неупорядоченные, и&nbsp;для правильной 
+работы со&nbsp;списками внутри текста нужно понять, какие списки для 
+чего применяются. Упорядоченные, они&nbsp;же нумерованные списки, 
+применяются тогда, когда от&nbsp;перемены мест элементов списка меняется
+ смысл. Все остальные списки&nbsp;— неупорядоченные, 
+и&nbsp;их&nbsp;будет большинство. Ниже мы&nbsp;разберём стилизацию обоих
+ видов списков. Важно научиться различать ситуации, где используются 
+упорядоченные списки, а&nbsp;где&nbsp;— неупорядоченные.</p><pre><code class="html hljs xml">
+<span class="hljs-comment">&lt;!-- Принципиален порядок пунктов, ради него всё задумано, значит, это упорядоченный список --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Смотри, какой у нас план поездки:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Летим до Франкфурта, там пересадка.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Садимся в самолёт, летим в Италию.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Там катаемся по городам неделю.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Потом едем на Сицилию и чилим несколько дней на пляже.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Если мы поменяем местами пункты, смысл не поменяется, значит, маркированный --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Нам предстоят:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>тюлений отдых у моря<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>знакомство с культурой страны<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>много вкусной еды<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>переходы по тропам в южных горах<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre><p>Не&nbsp;рекомендуется стилизовать списки по&nbsp;тегу. 
+В&nbsp;первую очередь потому, что списки часто используются 
+в&nbsp;семантической вёрстке для перечисления однотипных объектов, 
+карточек товаров и&nbsp;так далее. К&nbsp;тому&nbsp;же сложно 
+предусмотреть всё, что случится с&nbsp;сайтом за&nbsp;время его жизни, 
+а&nbsp;стилизация по&nbsp;тегу подразумевает, что свойства будут 
+применяться ко&nbsp;всем элементам во&nbsp;всех местах на&nbsp;сайте, 
+где подключены эти стили. Обычно у&nbsp;списков меняют отступ, буллит 
+(маркер неупорядоченного списка) или вид номера. </p><p>Чтобы разобраться в&nbsp;методах применения стилей, пригодится глава про селекторы&nbsp;— «<a href="https://htmlacademy.ru/courses/42">Селекторы, часть 1</a>».</p><p>Обычно
+ вызывает вопрос, как правильно оформлять текст, структурированный 
+с&nbsp;помощью списков. Писать каждый элемент с&nbsp;большой буквы или 
+с&nbsp;маленькой? Нужно&nbsp;ли ставить точку или запятую или что-то ещё
+ в&nbsp;конце? Здесь нет жёстких правил, принципиально только сделать 
+единообразно хотя&nbsp;бы в&nbsp;рамках одной статьи. </p><pre><code class="html hljs xml">
+<span class="hljs-comment">&lt;!-- Легенда заканчивается двоеточием, поэтому элементы с маленькой буквы. Знаки пунктуации в конце элементов по правилам русского языка должны быть, но без них смотрится лучше, и их нет ни в одном элементе. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Какие бывают на свете списки:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>маркированный список<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>нумерованный список<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>список определений<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>вложенный список<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>многоуровневый нумерованный список<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Элементы списка — целые предложения, список — отдельный элемент, не связанный с основным текстом, поэтому все предложения с большой буквы и оканчиваются точкой. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Некоторые списки очень редко встречаются в текстовых материалах.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Некоторые списки выглядят плохо и должны использоваться только в юридической документации, особенно многоуровневый нумерованный список.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Основные методы декорирования списков применимы ко всем видам списков.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre><p>Нужно не&nbsp;забывать отделять список от&nbsp;основного
+ текста, чтобы они не&nbsp;сливались и&nbsp;не&nbsp;«наезжали» друг 
+на&nbsp;друга. Списки, перед которыми стоит разъясняющая фраза, связаны 
+с&nbsp;текстом сильнее, чем списки, которые самостоятельны. Идеально, 
+если у&nbsp;первых отступ после немного больше, чем отступ до. </p><p>Как
+ можно изменить списки? Во-первых, можно изменить вид маркера. 
+Во-вторых, можно заменить маркер на&nbsp;изображение. В-третьих, можно 
+оформить сам список, и&nbsp;его маркеры.</p><p>За&nbsp;вид маркера или номера отвечает CSS-свойство <code>list-style-type</code>, оно может применяться как к&nbsp;упорядоченным, так и&nbsp;к&nbsp;неупорядоченным спискам.</p><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Вид маркера или номера. Стандартные значения для CSS-свойства <code>list-style-type</code></span></button><div class="spoiler__content hidden" data-toggle-area="part1"><p>Значения неупорядоченные:</p><ul><li><code>disc</code>&nbsp;— авто, закрашенный круг;</li><li><code>circle</code>&nbsp;— незакрашенный круг;</li><li><code>square</code>&nbsp;— квадрат;</li></ul><p>Значения упорядоченные:</p><ul><li><code>decimal</code>&nbsp;— обычные арабские цифры;</li><li><code>decimal-leading-zero</code>&nbsp;— арабские цифры, до&nbsp;десятков будут писаться с&nbsp;0 вначале;</li><li><code>lower-greek</code>&nbsp;— строчные буквы греческого алфавита;</li><li><code>lower-latin</code>&nbsp;— строчные буквы латинского алфавита;</li><li><code>lower-roman</code>&nbsp;— прописные римские цифры;</li><li><code>upper-latin</code>&nbsp;— прописные буквы латинского алфавита;</li><li><code>upper-roman</code>&nbsp;— прописные римские цифры.</li></ul></div></div><p>Также можно подключать подключать картинку вместо маркера. Для этого применяется CSS-свойство <code>list-style-image</code>.</p><pre><code class="css hljs">{
+  <span class="hljs-attribute">list-style-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../img/rocket.svg"</span>);
+}</code></pre><p>Чтобы скрыть маркеры, можно воспользоваться <code>list-style-type: none</code>.</p><p>Не&nbsp;стоит
+ делать все буллиты разными и&nbsp;тем более&nbsp;— подключать для 
+стилизации тяжёлые картинки: скорость загрузки сайта и&nbsp;его вес 
+может сыграть вам на&nbsp;руку больше, чем невероятно необычные 
+и&nbsp;все разные маркеры списка.</p><p>Чтобы сделать особенные буллиты, не&nbsp;предусмотренные свойствами CSS, можно использовать псевдоклассы <code>::before/::after</code> и&nbsp;свойство <code>content</code>. Например, <a href="https://unicode-table.com/ru" target="_blank" rel="nofollow noopener">символы юникода</a> в&nbsp;CSS вставляются не&nbsp;как <code>U+01FA</code>, а&nbsp;как <code>\01FA</code>, хотя можно встроить уже готовым символом, например, Ǻ. </p><p>Непосредственно ссылку на&nbsp;изображение в&nbsp;<code>content</code> вставлять не&nbsp;стоит, хотя технически так можно сделать&nbsp;— <code>content: url('img.jpg')</code>. Изображению в&nbsp;<code>content</code>-е нельзя выставить размер, так как свойство <code>content</code>
+ подразумевает текст и&nbsp;к&nbsp;нему применяются только текстовые 
+свойства. Если вид списка требует изображения, лучше сделать его фоном.</p><figure><img src="lists_files/skill_text_method_25.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_25@2x.png 2x" alt="Неупорядоченный список токсичных вещей с маркерами из символов юникода и фоновых изображений"><figcaption><span class="figurecaption-inside">Неупорядоченный список токсичных вещей с&nbsp;маркерами из&nbsp;символов юникода и&nbsp;фоновых изображений</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part3" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part3"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toxic"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Яды<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Продукты распада<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Отходы химического производства<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Бывшие друзья<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.toxic</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+}
+
+<span class="hljs-selector-class">.toxic</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">80px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#e8e8e8</span>;
+}
+
+<span class="hljs-selector-class">.toxic</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\2623"</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">85px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">85px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">27px</span>;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">55px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">80px</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">color</span>: white;
+
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"list-back.svg"</span>) no-repeat <span class="hljs-number">#333333</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+}</code></pre></div></div><p>Стандартные числовые или буквенные маркеры сложно стилизовать. Часто стандартные маркеры скрывают (с&nbsp;помощью свойства <code>list-style: none;</code>) и&nbsp;затем воссоздают с&nbsp;помощью CSS-счётчиков. Как это работает:</p><ul><li>свойство <code>counter-reset: li</code> сбрасывает (инициализирует) значение счётчика и&nbsp;даёт ему имя <code>li</code>;</li><li>свойство <code>counter-increment: li</code>&nbsp;— инкрементирует счётчик;</li><li>свойство <code>content: counter(li);</code>&nbsp;— отображает текущее значение счётчика.</li></ul><p>Значение счётчика можно вывести с&nbsp;помощью псевдоклассов <code>::before/::after</code> и&nbsp;свойства <code>content</code>. Содержимое <code>content</code> может собираться из&nbsp;нескольких частей, например, так: <code>content: "#" counter(li);</code> (получится&nbsp;— <code>#1</code>, <code>#2</code> и&nbsp;так далее). Подробнее о&nbsp;CSS-счётчиках мы&nbsp;говорим здесь&nbsp;— «<a href="https://htmlacademy.ru/courses/76/run/27">Хлебные крошки, шаг 4</a>».</p><p>Разберём
+ пример. В&nbsp;дизайне есть неупорядоченный список, который, тем 
+не&nbsp;менее, стилизован с&nbsp;помощью чисел перед пунктами списка. 
+Воспользуемся счётчиками и&nbsp;псевдоэлементами для стилизации.</p><figure><img src="lists_files/skill_text_method_26.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_26@2x.png 2x" alt="Стилизация не упорядоченного списка при помощи CSS-счётчика"><figcaption><span class="figurecaption-inside">Стилизация неупорядоченного списка при помощи CSS-счётчика</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part4" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part4"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Игры для компании<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"games"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Мафия<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Цель мафиози – убивать игроков ночью и казнить днём, выдавая себя за положительных героев. Цель Граждан – найти и казнить Мафию.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Шпион<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Цель игры - игрокам необходимо выявить шпиона, шпиону необходимо определить локацию.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Твистер<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Побеждает тот игрок, которому удастся устоять на поле, выполнив все приказы ведущего.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre><pre><code class="css hljs"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">36px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>;
+}
+
+<span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">56px</span>;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+}
+
+<span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.games</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+
+  <b><span class="hljs-attribute">counter-reset</span>: list-counter;</b>
+
+  <span class="hljs-attribute">list-style</span>: none;
+}
+
+<span class="hljs-selector-class">.games</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">position</span>: relative;
+
+  <b><span class="hljs-attribute">counter-increment</span>: list-counter;</b>
+
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">32px</span>;
+}
+
+<span class="hljs-selector-class">.games</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+
+  <b><span class="hljs-attribute">content</span>: <span class="hljs-string">"0"</span> <span class="hljs-built_in">counter</span>(list-counter);</b>
+
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffad0f</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;
+}</code></pre></div></div><p>Рассмотрим ещё один пример, где используем 
+уже знакомый приём со&nbsp;счётчиком. На&nbsp;этот раз список 
+«по-настоящему» упорядоченный.</p><figure><img src="lists_files/skill_text_method_27.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_27@2x.png 2x" alt="Упорядоченный список с перечнем шагов, чтобы стать фронтенд-разработчиком"><figcaption><span class="figurecaption-inside">Упорядоченный список с&nbsp;перечнем шагов, чтобы стать фронтенд-разработчиком</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part5" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part5"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"code-list"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Верстаешь чуть-чуть<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Верстаешь хорошо<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Учишь JS<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Работаешь фронтенд-разработчиком<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.code-list</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">30px</span>;
+
+  <b><span class="hljs-attribute">counter-reset</span>: li;</b>
+
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Montserrat"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
+
+<span class="hljs-selector-class">.code-list</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">40px</span> <span class="hljs-number">2em</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span> <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">522px</span>;
+
+  <b><span class="hljs-attribute">counter-increment</span>: li;</b>
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">32px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#39b54a</span>;
+}
+
+<span class="hljs-selector-class">.code-list</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-child</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.code-list</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">1.5em</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
+
+  <b><span class="hljs-attribute">content</span>: <span class="hljs-built_in">counter</span>(li);</b>
+
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">40px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">60px</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#39b54a</span>;
+}</code></pre></div></div></div></div></div></div></div></div>
+
+</body></html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+
+
+
+    <link rel="stylesheet" href="fonts_files/core.css">
+    <link rel="stylesheet" href="fonts_files/text.css">
+    <link rel="stylesheet" href="fonts_files/profile.css">
+    <link rel="preload" as="script" href="fonts_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Шрифты: специфика подключения - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+
+
+  </head>
+  <body>
+
+      <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Шрифты: специфика подключения
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><p>Собственно,
+ большая часть декора&nbsp;— работа со&nbsp;шрифтами. Особенный шрифт 
+делает мысль выделяющейся, каллиграфический шрифт меняет восприятие 
+цитаты&nbsp;— будто её&nbsp;и&nbsp;правда написали от&nbsp;руки, 
+а&nbsp;правильно подобранные отступы и&nbsp;дополнительные стили делают 
+шрифт уместным.</p><h2>Как подключить Google Fonts</h2><ul><li>Во-первых, можно подключить их&nbsp;в&nbsp;HTML, в&nbsp;метаданных сайта. Для этого нужно зайти на&nbsp;сайт <a href="https://fonts.google.com/" target="_blank" rel="nofollow noopener">Google Fonts</a>,
+ выбрать нужный шрифт, добавить в&nbsp;него кириллицу, добавить 
+в&nbsp;него жирное начертание если нужно, после этого&nbsp;— копировать 
+ссылку для встраивания. По&nbsp;умолчанию сервис добавляет в&nbsp;пакет 
+только латиницу в&nbsp;стандартном начертании.
+  </li></ul><figure><img src="fonts_files/skill_text_method_04.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_04@2x.png 2x" alt="Скриншот с Google Fonts, общий вид на шрифт"><figcaption><span class="figurecaption-inside">Выбор шрифта и&nbsp;его параметров</span></figcaption></figure><p>Вот как выглядит подключение стилевого файла со&nbsp;шрифтом:</p><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+
+  <b><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&amp;display=swap"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></b>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"css/style.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></code></pre><ul><li>Во&nbsp;вкладке <code>@Import</code>
+ можно скопировать код для встраивания в&nbsp;CSS. Это полезно, если 
+шрифт применяется только как декоративный, или если нет доступа 
+в&nbsp;метаданные сайта в&nbsp;html-файле. Этот метод 
+не&nbsp;рекомендуется, так как замедляет отрисовку сайта 
+в&nbsp;браузере.</li></ul><figure><img src="fonts_files/skill_text_method_05.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_05@2x.png 2x" alt="Скриншот с Google Fonts, добавленные наборы весом 400 и 700"><figcaption><span class="figurecaption-inside">Видно, что добавлены наборы символов для обычного и&nbsp;жирного начертания</span></figcaption></figure><p>Соответственно, в&nbsp;CSS попадёт такой код (заметьте, мы&nbsp;дописали латиницу в&nbsp;код наряду с&nbsp;кириллицей): </p><pre><code class="css hljs"><span class="hljs-keyword">@import</span> url(<span class="hljs-string">'https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;display=swap&amp;subset=cyrillic,latin'</span>);
+</code></pre><h2>Как подключать локальные шрифты</h2><p>Использование 
+сервисов, подобных Google Fonts, необязательно. Если в&nbsp;у&nbsp;вас 
+есть файл шрифта, то&nbsp;вы&nbsp;можете просто подключить его как 
+обычный ресурс в&nbsp;CSS. Для этого нужно воспользоваться специальной 
+директивой <code>@font-face</code>.</p><pre><code class="css hljs"><span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Font"</span>;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">local</span>(<span class="hljs-string">"Font"</span>),
+       <span class="hljs-built_in">local</span>(<span class="hljs-string">"My Font"</span>),
+       <span class="hljs-built_in">url</span>(<span class="hljs-string">"font.woff2"</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">"woff2"</span>),
+       <span class="hljs-built_in">url</span>(<span class="hljs-string">"font.woff"</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">"woff"</span>);
+}
+</code></pre><p>В&nbsp;свойстве <code>font-family</code> задаётся название подключаемого семейства шрифта.</p><p>В&nbsp;свойстве <code>src</code>
+ через запятую перечисляются источники, откуда шрифт может быть 
+подключён. Браузер будет пробовать все источники по&nbsp;очереди, пока 
+не&nbsp;найдёт подходящий вариант. Поэтому целесообразно указывать 
+источники, начиная с&nbsp;самого предпочтительного и&nbsp;заканчивая 
+наименее подходящим. Разберём пример выше:</p><ol><li>Сначала браузер попробует источник <code>local("Font")</code>. Это означает, что он&nbsp;попытается найти локально на&nbsp;вашем компьютере или устройстве шрифт под названием <i>Font</i>.</li><li>Если такого шрифта не&nbsp;найдено, следующим будет попытка найти и&nbsp;использовать локальный шрифт с&nbsp;названием <i>My&nbsp;Font</i>.</li><li>Если
+ в&nbsp;этот момент локальных шрифтов найдено не&nbsp;было, браузер 
+запросит файл шрифта из&nbsp;удалённого источника по&nbsp;адресу <code>url("font.woff2")</code>. После самого адреса шрифта опционально указывается подсказка для браузера&nbsp;— формат шрифта. В&nbsp;нашем примере это поле <code>format("woff2")</code>.</li><li>Если браузер не&nbsp;поддерживает формат <code>woff2</code>, то&nbsp;он&nbsp;пойдёт дальше и&nbsp;попробует загрузить шрифт из&nbsp;следующего источника. По&nbsp;адресу <code>url("font.woff")</code> будет запрошен шрифт в&nbsp;формате <code>woff</code>. Этот формат поддерживает большинство современных браузеров.</li></ol><h2>Как использовать подключённые шрифты</h2><p>На&nbsp;этом
+ этапе в&nbsp;ваш браузер уже загрузились шрифты: или из&nbsp;Google 
+Fonts, или прямо с&nbsp;вашего сайта локально. Чтобы ими теперь 
+воспользоваться, нужно прописать в&nbsp;<code>font-family</code> название семейства подключённого шрифта:</p><pre><code class="css hljs"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Font"</span>;
+}
+</code></pre><p>О&nbsp;том, как подключать внешние шрифты хорошо, 
+правильно и&nbsp;со&nbsp;всеми нюансами, Вадим Макеев докладывал 
+в&nbsp;конце 2019 года: <a href="https://youtu.be/uI3Q5m9xkkw" target="_blank" rel="nofollow noopener" savefrom_lm_index="0" savefrom_lm="1">видео на&nbsp;ютубе</a><span style="padding: 0; margin: 0; margin-left: 5px;"><a href="http://savefrom.net/?url=https%3A%2F%2Fyoutu.be%2FuI3Q5m9xkkw&amp;utm_source=ff&amp;utm_medium=extensions&amp;utm_campaign=link_modifier" target="_blank" title="Получи прямую ссылку" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhEAAQAOZ3APf39+Xl5fT09OPj4/Hx8evr6/3+/u7u7uDh4OPi497e3t7e3/z8/P79/X3GbuXl5ubl5eHg4WzFUfb39+Pj4lzGOV7LOPz7+/n6+vn5+ZTLj9/e387Ozt7f3/7+/vv7/ISbePn5+m/JV1nRKXmVbkCnKVrSLDqsCuDh4d/e3uDn3/z7/H6TdVeaV1uSW+bn5v39/eXm5eXm5kyHP/f39pzGmVy7J3yRd9/f3mLEKkXCHJbka2TVM5vaZn6Wdfn6+YG/c/r5+ZO/jeLi41aHTIeageLn4f39/vr6+kzNG2PVM5i+lomdf2CXYKHVmtzo2YXNeDqsBebl5uHh4HDKWN3g3kKqEH6WeZHTXIPKdnSPbv79/pfmbE7PHpe1l4O8dTO5DODg4VDLIlKUUtzo2J7SmEWsLlG4NJbFjkrJHP7+/VK5Nfz8+zmnC3KKa+Hg4OHh4Y63j/3+/eDg4Ojo6P///8DAwP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHcALAAAAAAQABAAAAfWgHd2g4SFhYJzdYqLjIpzgx5bBgYwHg1Hk2oNDXKDFwwfDF5NLmMtcStsn4MhGT8YS04aGmU1QRhIGYMTADQAQlAODlloAMYTgwICRmRfVBISIkBPKsqDBAREZmcVFhYVayUz2IMHB1dWOmImI2lgUVrmgwUFLzdtXTxKSSduMfSD6Aik48MGlx05SAykM0gKhAAPAhTB0oNFABkPHg5KMIBCxzlMQFQZMGBIggSDpsCJgGDOmzkIUCAIM2dOhEEcNijQuQDHgg4KOqRYwMGOIENIB90JBAA7&quot;); background-repeat: no-repeat; width: 16px; height: 16px; display: inline-block; border: medium none; text-decoration: none; padding: 0px; position: relative;" savefrom_lm="1" savefrom_lm_is_link="1"></a></span>, для удобства <a href="https://pepelsbey.net/pres/where-are-fonts/" target="_blank" rel="nofollow noopener">слайды на&nbsp;сайте Вадима</a>.</p><h3>Как не&nbsp;провалиться с&nbsp;«декоративными» шрифтами</h3><p>Иногда
+ очень хочется оформить какие-то элементы сайта красивыми 
+шрифтами&nbsp;— «рукописными», «каллиграфическими», рисованными. 
+Конечно, это вопрос дизайна, и&nbsp;нас он&nbsp;не&nbsp;всегда касается.
+ Но&nbsp;мы&nbsp;должны предусмотрительно подключить веб-безопасные 
+шрифты на&nbsp;случай, если локальные не&nbsp;загрузятся. 
+И&nbsp;не&nbsp;использовать слишком много разных шрифтов: они каждый 
+загружаются на&nbsp;компьютер пользователя, если их&nbsp;нет 
+в&nbsp;операционной системе. Не&nbsp;рекомендуется не&nbsp;использовать 
+больше 2 шрифтов на&nbsp;одной странице. <em>И&nbsp;не&nbsp;использовать шрифт Comic Sans как основной.</em></p><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Про веб-безопасные шрифты</span></button><div class="spoiler__content hidden" data-toggle-area="part1"><p>Это те, которые установлены на&nbsp;компьютерах максимального количества пользователей. <a href="https://www.cssfontstack.com/" target="_blank" rel="nofollow noopener">По&nbsp;ссылке</a> можно посмотреть статистику локально установленных шрифтов на&nbsp;разных операционных системах. Обычно имеются в&nbsp;виду: <i>Arial</i>, <i>Courier New</i>, <i>Georgia</i>, <i>Times New Roman</i>, <i>Trebuchet MS</i>, <i>Verdana</i>.</p><p>В&nbsp;случае,
+ если ваш особенный шрифт не&nbsp;загрузится по&nbsp;каким-либо 
+причинам, стоит указать «запасной», который не&nbsp;слишком испортит вид
+ сайта. Запасные шрифты записываются через запятую в&nbsp;порядке 
+предпочтения. Важно, чтобы эти шрифты поддерживали нужный язык основного
+ шрифта, например, кириллицу, если текст на&nbsp;сайте написан 
+по-русски.</p><p>Есть ещё одно требование к&nbsp;веб-безопасным шрифтам:
+ они должны относиться к&nbsp;тому&nbsp;же семейству, что 
+и&nbsp;«декоративный» шрифт. Для шрифтов с&nbsp;«засечками»&nbsp;— это 
+может быть <i>Times New Roman</i>, <i>Georgia</i>, «без засечек»&nbsp;— <i>Arial</i>, <i>Verdana</i>.</p><pre><code class="css hljs">{
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Some Beautiful Sans Serif Font"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+}</code></pre><pre><code class="css hljs">{
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Some Beautiful Serif Font"</span>, <span class="hljs-string">"Times New Roman"</span>, serif;
+}</code></pre></div></div><p>Правильно и&nbsp;удобно для пользователя 
+использовать для основного текста один шрифт без засечек. Текст, 
+оформленный разными шрифтами, разными кеглями, цветами и&nbsp;так далее 
+выглядит пёстрым и&nbsp;читается с&nbsp;большим трудом. </p><p>Но&nbsp;есть и&nbsp;ситуации, в&nbsp;которых лучше использовать не&nbsp;шрифт, а&nbsp;графику.</p><p>Зачастую
+ для логотипа используют специально купленный или отрисованный шрифт, 
+и&nbsp;есть соблазн сделать логотип текстом. Лучше не&nbsp;нужно: если 
+шрифт не&nbsp;загрузится, будет очень обидно, что за&nbsp;логотип 
+заплачено, а&nbsp;он&nbsp;выглядит не&nbsp;так, как нужно. 
+Не&nbsp;загрузившаяся картинка вызывает меньше вопросов. </p><figure><img src="fonts_files/skill_text_method_06.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_06@2x.png 2x" alt="Скриншот из фигмы с текстовым логотипом"><figcaption><span class="figurecaption-inside">В&nbsp;Фигме видно, что логотип сделан текстом, но&nbsp;выгрузим мы&nbsp;его как SVG</span></figcaption></figure><p>В&nbsp;первом&nbsp;же
+ блоке после меню часто используются особенные шрифты, это своего рода 
+промо-блок, в&nbsp;нём часто предполагается что-то яркое, что должно 
+зацепить пользователя. Часто шрифт в&nbsp;этом блоке очень необычный 
+и&nbsp;больше нигде не&nbsp;используется. Не&nbsp;нужно делать его 
+шрифтом в&nbsp;этом случае, всё равно там есть картинка-фон, объедините 
+слои в&nbsp;графическом редакторе и&nbsp;выгрузите как графику. </p><p>При выгрузке векторной графики важно убедиться, что выгрузились именно векторные формы, описанные точками, а&nbsp;не&nbsp;тег <code>&lt;text&gt;</code>, в&nbsp;который обёрнуты буквы и&nbsp;приписаны стили.</p><pre><code class="html hljs xml">
+<span class="hljs-comment">&lt;!-- Пример с векторными формами внутри изображения --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"106"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"41"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 106 41"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M34.7969 20.1797C34.7969 22.0651 34.2734 … 19.7891Z"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"black"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Пример с текстом внутри векторного изображения --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.dollytext</span> {
+      <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Open Sans"</span>, sans-serif;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dollytext"</span>&gt;</span>
+    DOLLY
+  <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre><p>Научиться работать с&nbsp;форматом SVG можно в&nbsp;курсе «<a href="https://htmlacademy.ru/courses/svg">Основы SVG</a>». Выгружать графику из&nbsp;Фотошопа мы&nbsp;учим в&nbsp;навыке «<a href="https://htmlacademy.ru/skills/photoshop-workflow/graphics">Экспорт параметров и&nbsp;графики из&nbsp;PSD‑макетов</a>».</p><figure><img src="fonts_files/skill_text_method_07.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_07@2x.png 2x" alt="Выход из зоны комфорта — nо, что нам часто советуют. Но нельзя выйти оттуда, куда ты ещё не входил"><figcaption><span class="figurecaption-inside">Это
+ слайд под главным меню. Поверх изображения наложен текст, набранный 
+разными декоративными шрифтами. Если эти шрифты больше нигде 
+на&nbsp;странице не&nbsp;используются, то&nbsp;картинку следует 
+объединить со&nbsp;шрифтами в&nbsp;единое растровое изображение</span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-comment">&lt;!-- Раз это картинка, с которой нельзя скопировать текст, и её содержание ускользнёт от ридеров и роботов, стоит написать для неё визуально скрытый текст или хороший </span><code><span class="hljs-comment">alt</span></code><span class="hljs-comment"> --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/some-pic.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Выход из зоны комфорта: то, что нам советуют. Но нельзя выйти оттуда, куда ты ещё не входил"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Выход из зоны комфорта: то, что нам советуют. Но нельзя выйти оттуда, куда ты ещё не входил<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><p>Кроме шрифтов с&nbsp;буквами и&nbsp;символами существуют
+ «иконочные шрифты», позволяющие встроить файл с&nbsp;готовым набором 
+иконок вместо букв и&nbsp;дальше использовать его неограниченно. Это 
+оправданная мера, если на&nbsp;сайте предполагается очень много иконок 
+и&nbsp;они будут использоваться единообразно. Во&nbsp;всех остальных 
+случаях иконочный шрифт не&nbsp;обоснован. Во-первых, иконочные шрифты 
+обычно достаточно тяжёлые, и&nbsp;это дополнительно увеличивает вес 
+сайта, и&nbsp;такой шрифт должен скачаться на&nbsp;компьютер 
+пользователя (шансов, что именно он&nbsp;уже есть у&nbsp;пользователя, 
+очень мало: иконочные шрифты часто индивидуальные). Во-вторых, любые 
+манипуляции с&nbsp;такими шрифтами сложны (при маштабировании падает 
+качество, для ретины нужны отдельные улучшенные иконки, иначе браузер 
+сам отрисует), в&nbsp;то&nbsp;время как SVG&nbsp;— уже принятый для 
+таких случаев стандарт&nbsp;— в&nbsp;качестве не&nbsp;теряет ни&nbsp;при
+ каких обстоятельствах. </p><h4>Другие дополнения про шрифты:</h4><ul><li><a href="ruble.html">Вставка знака рубля</a></li><li><a href="fontstools.html">Инструменты для работы со&nbsp;шрифтами</a></li></ul></div></div></div></div></div></div>
+
+</body></html>

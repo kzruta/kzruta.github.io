@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="" lang="ru"><head>
+<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="floats_files/core.css">
+    <link rel="stylesheet" href="floats_files/text.css">
+    <link rel="stylesheet" href="floats_files/profile.css">
+    <link rel="preload" as="script" href="floats_files/general.js">
+    <title>Вёрстка текстового содержимого страниц: Врезки, обтекания - HTML Academy</title>
+    <meta name="theme-color" content="#2f358f">
+
+
+
+  </head>
+  <body>
+
+       <div class="page-content page-content--chapter page-content--skill"><div class="page-content__inner"><div class="page-content__left"><aside class="page-content__left-column"><div class="side-menu side-menu--main side-menu--skill"><h2><a href="../start.html">Вёрстка текстового содержимого страниц</a></h2><p class="side-menu__title"><a class="side-menu__link side-menu__link--main link">Навык</a><button class="side-menu__button" type="button"><span class="sr-only">Меню</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="2" d="M2 2h18v18H2z"></path><path d="M6 7h10.096M6 11h10.096M6 15h6" stroke-width="2" stroke-linecap="square"></path></svg></button></p><div class="side-menu__list"><ul><li class="side-menu__item side-menu__item--active"><a class="link" href="tutorial.html">Обзор основных тем и&nbsp;элементов</a></li><li class="side-menu__item "><a class="link" href="theory.html">Углублённая теория</a></li><li class="side-menu__item "><a class="link" href="methodology.html">Методология вёрстки текстовых элементов</a></li><li class="side-menu__item "><a class="link" href="case-01.html">Кейс&nbsp;1, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-02.html">Кейс&nbsp;2, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="case-03.html">Кейс&nbsp;3, лёгкий уровень</a></li><li class="side-menu__item "><a class="link" href="accessory.html">Дополнительная теория</a></li></ul><div class="chapter-extras"><span class="badge badge--green"><span class="badge__text">
+              полный комплект
+            </span></span></div></div></div><div class="side-menu__list"></div></aside></div><div class="page-content__right"><nav class="breadcrumbs breadcrumbs--chapter" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/" itemprop="url">Главная</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/study" itemprop="url">Моё обучение</a></li><li class="breadcrumbs__item" itemprop="name"><a href="https://htmlacademy.ru/skills/text-layout" itemprop="url">Вёрстка текстового содержимого страниц</a></li></ul></nav><div class="chapter-description"><h1 class="chapter-description__title">
+            Врезки, обтекания
+          </h1><div class="chapter-description__content chapter-description__content--theory"><div class="chapter-description__text text-container"><p>Дополнительная
+ информация, относящаяся к&nbsp;основному контенту, 
+но&nbsp;не&nbsp;включённая в&nbsp;сам материал, зачастую выносится сбоку
+ от&nbsp;основного потока текста. Там может появиться расшифровка 
+термина, или уточнение, или наш любимый «режим зануды», или список 
+ссылок на&nbsp;другие материалы по&nbsp;теме&nbsp;— в&nbsp;общем, тот 
+контент, который частью материала является, но&nbsp;из&nbsp;потока 
+текста выпадает и&nbsp;не&nbsp;кажется авторам строго обязательным.</p><p>С&nbsp;семантической точки зрения это может быть <code>&lt;aside&gt;</code>,
+ если содержание врезки напрямую не&nbsp;относится к&nbsp;посту 
+и&nbsp;к&nbsp;тому&nbsp;же выпадает из&nbsp;потока. Но&nbsp;также это 
+может быть размечено либо как <code>&lt;div&gt;</code>, либо тегом, лучше всего подходящим по&nbsp;смыслу: <code>&lt;dl&gt;</code>, если выносится определение термина, <code>&lt;blockquote&gt;</code>,
+ если сбоку выносится дополнительная цитата… Нужно только понять, что 
+именно будет врезаться на&nbsp;конкретном сайте и&nbsp;привязывать стили
+ к&nbsp;классу, а&nbsp;не&nbsp;к&nbsp;тегу.</p><p>Для выноса врезки вбок обычно используются два метода: «обтекание» и&nbsp;«вынос из&nbsp;потока».</p><div class="spoiler"><button class="spoiler__button" data-toggle="part1" data-toggle-class="spoiler__button--opened"><span>Замечание</span></button><div class="spoiler__content hidden" data-toggle-area="part1"><p>Кстати,
+ врезка часто появляется в&nbsp;основном контенте без выноса вбок. 
+В&nbsp;таком случае врезка «разрывает» основную канву контента 
+и&nbsp;её&nbsp;уместно верстать с&nbsp;помощью тега <code>&lt;aside&gt;</code>. Пример:</p><figure><img src="floats_files/skill_text_method_add_02.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_add_02@2x.png 2x" alt="Пример врезки без выноса вбок"><figcaption><span class="figurecaption-inside">Пример врезки без выноса вбок</span></figcaption></figure></div></div><h2>Обтекание</h2><p>В&nbsp;главе «<a href="https://htmlacademy.ru/courses/65">Сетки</a>»
+ вы&nbsp;научитесь использовать обтекание и&nbsp;разберётесь с&nbsp;его 
+особенностями. С&nbsp;расширением поддержки флексбокса флоат как метод 
+вёрстки адаптивного сайта уходит в&nbsp;прошлое. И&nbsp;правда, 
+у&nbsp;флексов как метода для формирования потока страниц есть много 
+преимуществ. Из-за этого иногда считается, что <code>float</code> устарел как концепция.</p><p>Но&nbsp;для
+ отдельных элементов в&nbsp;потоке текста, врезок, блоков 
+с&nbsp;заметками и&nbsp;ссылками обтекание подходит как нельзя лучше. 
+Разберём простой пример:</p><figure><img src="floats_files/skill_text_method_28.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_28@2x.png 2x" alt="Врезка: Кстати, текст совершенно не обязательно должен быть бессмысленным, это приятный бонус"><figcaption><span class="figurecaption-inside">В&nbsp;книжной
+ типографике такой подход не&nbsp;приветствуется, считается, что это 
+сбивает с&nbsp;ритма чтения. Но&nbsp;в&nbsp;вебе встречается часто</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part2" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part2"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Филогенез, так или иначе, представляет собой механизм эвокации, что-то подобное можно встретить в работах Ауэрбаха и Тандлера. Художественная контаминация продолжает постмодернизм. Цвет, так или иначе, сложен. Воображение трансформирует стиль, именно об этом комплексе движущих сил писал З. Фрейд в теории сублимации.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bonus"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Кстати, текст совершенно не обязательно должен быть бессмысленным, это приятный бонус.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Возрождение образует элитарный фарс. Фабульный каркас изменяем. Аксиология образует онтологический статус искусства, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Нередуцируемость содержания, в том числе, возможна. Теория наивного и сентиментального искусства, так или иначе, заканчивает фактографический горизонт ожидания, именно об этом комплексе движущих сил писал З. Фрейд в теории сублимации. Эти слова совершенно справедливы, однако ирония продолжает механизм эвокации.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.text</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">770px</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Roboto"</span>, <span class="hljs-string">"Arial"</span>, sans-serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">30px</span>;
+}
+
+<span class="hljs-selector-class">.bonus</span> {
+  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">64px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">160px</span>;
+
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#744ce6</span>;
+}
+</code></pre></div></div><p>В&nbsp;следующем примере разберём случай, 
+когда в&nbsp;текст встраивается цитата. При этом встроенный блок 
+обтекается текстом параграфа слева. Ещё одна особенность&nbsp;— 
+следующий по&nbsp;очереди параграф должен уже перестать обтекать цитату.
+ Для этого применим приём с&nbsp;«очисткой обтекания»&nbsp;— <code>clearfix</code>. Заключим в&nbsp;один контейнер цитату и&nbsp;обтекающий параграф и&nbsp;зададим контейнеру класс <code>clearfix</code>. Для класса добавим следующее правило:</p><pre><code class="css hljs"><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">clear</span>: both;
+}
+</code></pre><p>Это правило создаст «псевдораспорку», которая ограничит 
+действие обтекания только на&nbsp;нужные нам два элемента. Подробно 
+такой приём разбирается в&nbsp;<a href="https://htmlacademy.ru/courses/65/run/16">интерактивном курсе</a>.</p><figure><img src="floats_files/skill_text_method_29.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_text_method_29@2x.png 2x" alt="Пример обтекания цитаты в тексте"><figcaption><span class="figurecaption-inside">В&nbsp;примере цитата обтекается параграфом слева</span></figcaption></figure><div class="spoiler"><button class="spoiler__button" data-toggle="part3" data-toggle-class="spoiler__button--opened"><span>Вёрстка элемента</span></button><div class="spoiler__content hidden" data-toggle-area="part3"><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Реконструктивный подход начинает резкий канон. Дискредитация теории катарсиса даёт резкий хтонический миф. Феномер «психической мутации» вызывает элитарный художественный талант.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"quote"</span>&gt;</span>«Это то, что действительно радует в работе с компьютерами. Они не спорят, они всё помнят, и они никогда не выпьют всё ваше пиво.» <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Пол Лери<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Теоретическая социология, следовательно, трансформирует персональный анимус. Либидо постоянно. Одиночество готично заканчивает композиционный биографический метод. Манерничанье, следовательно, использует комплекс априорной бисексуальности.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Иными словами, аксиология выстраивает первоначальный комплекс априорной бисексуальности. Иносказательность образа просветляет комплекс априорной бисексуальности, что-то подобное можно встретить в работах Ауэрбаха и Тандлера. Эти слова совершенно справедливы, однако метафора аккумулирует психологический параллелизм. Фарс изящно представляет собой принцип артистизма.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.text</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">770px</span>;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Merriweather"</span>, <span class="hljs-string">"Arial"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">30px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> {
+  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">64px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">390px</span>;
+
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica"</span>, <span class="hljs-string">"Arial"</span>, serif;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;
+  <span class="hljs-attribute">text-indent</span>: -<span class="hljs-number">0.55em</span>;
+}
+
+<span class="hljs-selector-class">.quote</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">0.7em</span>;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">9px</span> solid <span class="hljs-number">#333333</span>;
+
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">42px</span>;
+}
+
+<span class="hljs-selector-class">.quote</span> <span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span>;
+}
+
+<span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">clear</span>: both;
+}
+</code></pre></div></div><p>При использовании флоатов нужно выставлять им&nbsp;конкретные параметры ширины, иначе они будут подстраиваться под содержимое:</p><figure><img src="floats_files/skill_add2_21.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_add2_21@2x.png 2x" alt="Врезка: данный структурализм: предпосылки и развитие."><figcaption><span class="figurecaption-inside">Здесь флоат не&nbsp;ограничен явно, поэтому он&nbsp;занимает столько места, сколько требует его содержимое</span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"right-floated"</span>&gt;</span>Данный структурализм: предпосылки и развитие<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Согласно предыдущему, вещь в себе трансформирует неоднозначный закон исключённого третьего. Заблуждение непредвзято творит гедонизм. Моцзы и другие считали, что созерцание категорически индуцирует сложный мир, изменяя привычную реальность. Дедуктивный метод, по определению, амбивалентно выводит данный даосизм. Освобождение поразительно.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.right-floated</span> {
+  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10px</span>;
+}
+</code></pre><figure><img src="floats_files/skill_add2_22.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_add2_22@2x.png 2x" alt="Врезка: данный структурализм: предпосылки и развитие."><figcaption><span class="figurecaption-inside">Здесь флоат явно ограничен, он&nbsp;занимает то&nbsp;место, которое мы&nbsp;для него выделили</span></figcaption></figure><pre><code class="css hljs"><span class="hljs-selector-class">.right-floated</span> {
+  <span class="hljs-attribute">float</span>: right;
+
+  <b><span class="hljs-attribute">width</span>: <span class="hljs-number">350px</span>;</b>
+
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10px</span>;
+}
+</code></pre><h2>Вынос из&nbsp;потока</h2><p>Теперь давайте рассмотрим приём с&nbsp;выносом блока из&nbsp;потока.</p><p>Обычно
+ это делается следующим образом: выносимому блоку задаётся абсолютное 
+позиционирование, а&nbsp;блоку контейнеру, в&nbsp;котором выносимый блок
+ находится,&nbsp;— относительное. Затем вынесенному из&nbsp;потока блоку
+ задаются две обязательные координаты, например, <code>top</code> и&nbsp;<code>left</code>,
+ по&nbsp;которым блок «привяжется» к&nbsp;определённому краю контейнера.
+ После этого абсолютно спозиционированному блоку задаётся явная ширина. 
+А&nbsp;координате стороны, в&nbsp;которую текст выносится, задаётся 
+отрицательное значение больше или равно ширине блока. Например, блок 
+шириной <code>width: 100px</code> выносится влево с&nbsp;небольшим запасом для отступа&nbsp;— <code>left: -120px</code>.</p><p>Давайте разберём схематичный пример:</p><figure><img src="floats_files/skill_method_34.png" srcset="https://assets.htmlacademy.ru/content/skills/5/skill_method_34@2x.png 2x" alt="Пример выноса врезки вбок"><figcaption><span class="figurecaption-inside">Пример выноса врезки вбок</span></figcaption></figure><pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Суждение выводит из ряда вон выходящий дедуктивный метод. Представляется логичным, что искусство дискредитирует естественный гедонизм, tertium nоn datur. Адаптация осмысляет типичный интеллект.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+  …
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sidebar"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Читайте также:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Данный структурализм: предпосылки и развитие<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+</code></pre><pre><code class="css hljs"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">with</span>: <span class="hljs-number">560px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+
+<span class="hljs-selector-class">.sidebar</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">250px</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">230px</span>;
+}
+</code></pre></div></div></div></div></div></div>
+
+
+</body></html>
