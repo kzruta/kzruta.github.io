@@ -1493,6 +1493,7 @@ table.iksweb th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: scroll;
 }
 
 .products-table__item {
