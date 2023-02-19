@@ -1433,6 +1433,11 @@ h4.products__about {
   margin-bottom: 65px;
 }
 
+.tabs_container {
+  position: relative;
+  margin-top: 30px;
+}
+
 table.iksweb {
   width: 100%;
   border-collapse: collapse;
@@ -1490,13 +1495,14 @@ table.iksweb th {
   align-items: center;
 }
 
-ul.products-table__item {
+.products-table__item {
   display: flex;
   text-decoration: none;
   list-style-type: none;
   flex-wrap: wrap;
 }
-ul.products-table__item li a {
+
+.rounded {
   height: 20px;
   font-family: "Montserrat Medium", sans-serif;
   font-size: 16px;
@@ -1514,16 +1520,12 @@ ul.products-table__item li a {
   height: 46px;
 }
 
-#tabs_container {
-  position: relative;
-}
-
-#tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li {
+.tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li {
   float: left;
   margin-right: 2px;
 }
 
-#tabs, #tabs2, #tabs3, #tabs4, #tabs5 {
+.tabs, #tabs2, #tabs3, #tabs4, #tabs5 {
   margin: 0 auto;
   margin-bottom: 40px;
 }
@@ -1533,7 +1535,7 @@ ul.products-table__item li a {
   clear: both;
 }
 
-#tabs_container {
+.tabs_container {
   position: relative;
 }
 
@@ -1555,8 +1557,20 @@ ul.products-table__item li a {
   transition-delay: 0.3s;
 }
 
-#tabs_container div {
+.tabs_container div {
   margin-right: 40px;
+}
+
+.tabs__btn_active {
+  cursor: default;
+}
+
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
 }
 
 @media screen and (max-width: 1370px) {
