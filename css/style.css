@@ -1698,8 +1698,6 @@ table.iksweb th {
     width: 100%;
     max-height: 200px;
     object-fit: cover;
-    border-radius: 20px;
-    width: auto;
     height: 100%;
     border-radius: 20px;
   }
