@@ -61,6 +61,58 @@ $(document).ready(function(){
 })
 
 
+
+
+class ItcTabs {
+  constructor(target, config) {
+    const defaultConfig = {};
+    this._config = Object.assign(defaultConfig, config);
+    this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
+    this._elButtons = this._elTabs.querySelectorAll('.tabs__btn');
+    this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
+    this._eventShow = new Event('tab.itc.change');
+    this._init();
+    this._events();
+  }
+  _init() {
+    this._elTabs.setAttribute('role', 'tablist');
+    this._elButtons.forEach((el, index) => {
+      el.dataset.index = index;
+      el.setAttribute('role', 'tab');
+      this._elPanes[index].setAttribute('role', 'tabpanel');
+    });
+  }
+  show(elLinkTarget) {
+    const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+    const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
+    const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
+    if (elLinkTarget === elLinkActive) {
+      return;
+    }
+    elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
+    elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
+    elLinkTarget.classList.add('tabs__btn_active');
+    elPaneTarget.classList.add('tabs__pane_show');
+    this._elTabs.dispatchEvent(this._eventShow);
+    elLinkTarget.focus();
+  }
+  showByIndex(index) {
+    const elLinkTarget = this._elButtons[index];
+    elLinkTarget ? this.show(elLinkTarget) : null;
+  };
+  _events() {
+    this._elTabs.addEventListener('click', (e) => {
+      const target = e.target.closest('.tabs__btn');
+      if (target) {
+        e.preventDefault();
+        this.show(target);
+      }
+    });
+  }
+}
+
+// инициализация .tabs как табов
+new ItcTabs('.tabs');
 /*!
  * Materialize v0.98.2 (http://materializecss.com)
  * Copyright 2014-2015 Materialize
@@ -1319,9 +1371,3 @@ else
 ("click",function()
 {$(this).fadeOut('fast');});});;
 
-(function($,window,document,undefined){var pluginName="tabulous",defaults={effect:"scale"};function Plugin(element,options){this.element=element;this.$elem=$(this.element);this.options=$.extend({},defaults,options);this._defaults=defaults;this._name=pluginName;this.init()}Plugin.prototype={init:function(){var links=this.$elem.find("a");var firstchild=this.$elem.find("li:first-child").find("a");var lastchild=this.$elem.find("li:last-child").after('<span class="tabulousclear"></span>');if(this.options.effect==
-"scale")tab_content=this.$elem.find("div").not(":first").not(":nth-child(1)").addClass("hidescale");else if(this.options.effect=="slideLeft")tab_content=this.$elem.find("div").not(":first").not(":nth-child(1)").addClass("hideleft");else if(this.options.effect=="scaleUp")tab_content=this.$elem.find("div").not(":first").not(":nth-child(1)").addClass("hidescaleup");else if(this.options.effect=="flip")tab_content=this.$elem.find("div").not(":first").not(":nth-child(1)").addClass("hideflip");var firstdiv=
-this.$elem.find("#tabs_container");var firstdivheight=firstdiv.find("div:first").height();var alldivs=this.$elem.find("div:first").find("div");alldivs.css({"position":"absolute","top":"40px"});firstdiv.css("height",firstdivheight+"px");firstchild.addClass("tabulous_active");links.bind("click",{myOptions:this.options},function(e){e.preventDefault();var $options=e.data.myOptions;var effect=$options.effect;var mythis=$(this);var thisform=mythis.parent().parent().parent();var thislink=mythis.attr("href");
-firstdiv.addClass("transition");links.removeClass("tabulous_active");mythis.addClass("tabulous_active");thisdivwidth=thisform.find("div"+thislink).height();if(effect=="scale"){alldivs.removeClass("showscale").addClass("make_transist").addClass("hidescale");thisform.find("div"+thislink).addClass("make_transist").addClass("showscale")}else if(effect=="slideLeft"){alldivs.removeClass("showleft").addClass("make_transist").addClass("hideleft");thisform.find("div"+thislink).addClass("make_transist").addClass("showleft")}else if(effect==
-"scaleUp"){alldivs.removeClass("showscaleup").addClass("make_transist").addClass("hidescaleup");thisform.find("div"+thislink).addClass("make_transist").addClass("showscaleup")}else if(effect=="flip"){alldivs.removeClass("showflip").addClass("make_transist").addClass("hideflip");thisform.find("div"+thislink).addClass("make_transist").addClass("showflip")}firstdiv.css("height",thisdivwidth+"px")})},yourOtherFunction:function(el,options){}};$.fn[pluginName]=function(options){return this.each(function(){new Plugin(this,
-options)})}})(jQuery,window,document);
