@@ -1,0 +1,1906 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+ * ========================================================================== */
+/**
+ * * 1. Correct the line height in all browsers.
+ * * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+ * ========================================================================== */
+/**
+ * * Remove the margin in all browsers.
+ * */
+body {
+  margin: 0;
+}
+
+/**
+ * * Render the `main` element consistently in IE.
+ * */
+main {
+  display: block;
+}
+
+/**
+ * * Correct the font size and margin on `h1` elements within `section` and
+ * * `article` contexts in Chrome, Firefox, and Safari.
+ * */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ * ========================================================================== */
+/**
+ * * 1. Add the correct box sizing in Firefox.
+ * * 2. Show the overflow in Edge and IE.
+ * */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/**
+ * * 1. Correct the inheritance and scaling of font size in all browsers.
+ * * 2. Correct the odd `em` font sizing in all browsers.
+ * */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * * Remove the gray background on active links in IE 10.
+ * */
+a {
+  background-color: transparent;
+}
+
+/**
+ * * 1. Remove the bottom border in Chrome 57-
+ * * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * * Add the correct font weight in Chrome, Edge, and Safari.
+ * */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * * 1. Correct the inheritance and scaling of font size in all browsers.
+ * * 2. Correct the odd `em` font sizing in all browsers.
+ * */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * * Add the correct font size in all browsers.
+ * */
+small {
+  font-size: 80%;
+}
+
+/**
+ * * Prevent `sub` and `sup` elements from affecting the line height in
+ * * all browsers.
+ * */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+ * ========================================================================== */
+/**
+ * * Remove the border on images inside links in IE 10.
+ * */
+img {
+  border-style: none;
+}
+
+/* Forms
+ * ========================================================================== */
+/**
+ * * 1. Change the font styles in all browsers.
+ * * 2. Remove the margin in Firefox and Safari.
+ * */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/**
+ * * Show the overflow in IE.
+ * * 1. Show the overflow in Edge.
+ * */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * * 1. Remove the inheritance of text transform in Firefox.
+ * */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * * Correct the inability to style clickable types in iOS and Safari.
+ * */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * * Remove the inner border and padding in Firefox.
+ * */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * * Restore the focus styles unset by the previous rule.
+ * */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * * Correct the padding in Firefox.
+ * */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * * 1. Correct the text wrapping in Edge and IE.
+ * * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * * 3. Remove the padding so developers are not caught out when they zero out
+ * *    `fieldset` elements in all browsers.
+ * */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * * Remove the default vertical scrollbar in IE 10+.
+ * */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * * 1. Add the correct box sizing in IE 10.
+ * * 2. Remove the padding in IE 10.
+ * */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * * Correct the cursor style of increment and decrement buttons in Chrome.
+ * */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * * 1. Correct the odd appearance in Chrome and Safari.
+ * * 2. Correct the outline style in Safari.
+ * */
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * * Remove the inner padding in Chrome and Safari on macOS.
+ * */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * * 1. Correct the inability to style clickable types in iOS and Safari.
+ * * 2. Change font properties to `inherit` in Safari.
+ * */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+ * ========================================================================== */
+/* * Add the correct display in Edge, IE 10+, and Firefox.
+ * */
+details {
+  display: block;
+}
+
+/* * Add the correct display in all browsers.
+ * */
+summary {
+  display: list-item;
+}
+
+/* Misc
+ * ========================================================================== */
+/**
+ * * Add the correct display in IE 10+.
+ * */
+template {
+  display: none;
+}
+
+/**
+ * * Add the correct display in IE 10.
+ * */
+[hidden] {
+  display: none;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+@media (max-width: 1339.98px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 479.98px) {
+  .container {
+    max-width: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  background-color: #F5F8FE;
+  font-size: calc(13px + 3 * (100vw - 320px) / 960);
+  line-height: calc(20px + 4 * (100vw - 320px) / 960);
+  position: relative;
+  font-weight: 400;
+  text-decoration: none;
+}
+body a {
+  text-decoration: none;
+}
+body.locked {
+  overflow: hidden;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Avenir Next Cyr Light";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-Light.woff") format("woff"), url("../fonts/AvenirNextCyr-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Regular";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Medium";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-Medium.woff") format("woff"), url("../fonts/AvenirNextCyr-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Light";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-Light.woff") format("woff"), url("../fonts/AvenirNextCyr-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Light";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr SemiBold";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-SemiBold.woff") format("woff"), url("../fonts/AvenirNextCyr-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Bold";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-Bold.woff") format("woff"), url("../fonts/AvenirNextCyr-Bold.woff2") format("woff2");
+  font-weight: 750;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat SemiBold";
+  font-display: swap;
+  src: url("..fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Black";
+  font-display: swap;
+  src: url("..fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Medium Italic";
+  font-display: swap;
+  src: url("..fonts/AvenirNextCyr-MediumItalic.woff") format("woff"), url("../fonts/AvenirNextCyr-MediumItalic.woff2") format("woff2");
+  font-weight: 750;
+  font-style: normal;
+}
+.nav {
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.nav__icon {
+  width: 110px;
+  height: 105px;
+  margin-left: auto;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo p {
+  color: #3F516C;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  line-height: 14.63px;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 22px;
+  padding: 0;
+  font-size: 13px;
+  font-family: "Montserrat Medium", sans-serif;
+}
+
+.menu__item {
+  margin-right: 42px;
+  list-style: none;
+}
+.menu__item-link {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu__item-link:hover {
+  color: #346DF1;
+  border-bottom: 1px dashed #346DF1;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.info-nav__hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1130px) {
+  .nav__icon {
+    padding: 0 3% 0 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .menu {
+    position: fixed;
+    background: #7d849e;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+  }
+  .menu.active {
+    display: flex;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    pointer-events: all;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 22;
+    animation: fade 0.1s linear;
+    padding-top: 40px;
+    margin: 0;
+  }
+  .menu__item-link:hover {
+    color: #dddce2;
+    border-bottom: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo__link {
+    flex-direction: row;
+  }
+  p.info-nav__hidden {
+    margin-top: 5px;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .info-nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+  .info-nav__hidden {
+    display: block;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    z-index: 102;
+    cursor: pointer;
+    right: 0px;
+    top: 20px;
+  }
+  .burger.active-burger:before {
+    background: #fff;
+    transform: rotate(45deg);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    top: 8px;
+  }
+  .burger.active-burger:after {
+    background: #fff;
+    transform: rotate(-45deg);
+    bottom: 10px;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+  .burger.active-burger span {
+    transform: scale(0);
+  }
+  .burger:before, .burger:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #a5a5a5;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+  .burger:before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger span {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 100%;
+    background: #a5a5a5;
+    height: 2px;
+    transform: scale(1);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+  .menu__item {
+    margin-top: 15px;
+  }
+  .menu__item-link {
+    color: white;
+  }
+}
+@media screen and (max-width: 730px) {
+  img.logo__img {
+    width: 80px;
+  }
+  .info-nav {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .info-nav {
+    max-width: 250px;
+    margin-left: 5px;
+  }
+  p.info-nav__hidden {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+  img.logo__img {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 372px) {
+  img.logo__img {
+    width: 60px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  p.info-nav__hidden {
+    max-width: 220px;
+    margin-top: 3px;
+  }
+  .navbar {
+    padding-top: 25px;
+  }
+}
+@media screen and (max-width: 372px) {
+  p.info-nav__hidden {
+    max-width: 220px;
+  }
+  p.info-nav__lede {
+    display: none;
+  }
+  .info-nav {
+    margin-left: 3px;
+  }
+  .burger {
+    right: 16px;
+  }
+  .container {
+    padding: 0 5px;
+  }
+  img.logo__img {
+    width: 50px;
+  }
+  .burger {
+    top: 15px;
+    right: 10px;
+  }
+}
+.hero {
+  overflow: hidden;
+}
+
+h2.hero__title {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  margin-bottom: 50px;
+}
+h2.hero__title span {
+  background-color: #F4EDFA;
+  box-shadow: inset 0 20px 0 0 #F5F8FE, inset 0 -4px 0 0 #F4EDFA;
+}
+
+.hero__info p {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #07150A;
+  max-width: 775px;
+}
+.hero__info p span {
+  background-color: #EBF1FD;
+  box-shadow: inset 0 8px 0 0 #F5F8FE, inset 0 -4px 0 0 #EBF1FD;
+}
+
+.ball_abs {
+  position: absolute;
+  z-index: -999;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  padding: 28px 0;
+}
+
+.hero__icon {
+  background-image: url(/img/icon-gradient.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.9em;
+  height: 0.9em;
+  margin-top: -2px;
+  margin-left: 6px;
+}
+
+.ccc {
+  bottom: 96px;
+  right: -122px;
+}
+
+.gallery {
+  padding-top: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+a[data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.gallery__block {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__block-up, .gallery__block-down {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: auto;
+}
+
+.gallery__block-down a {
+  margin: 2px;
+}
+
+.gallery__block-up a {
+  margin: 2px;
+}
+
+.rounded {
+  border-radius: 20px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 1.5px;
+}
+.rounded:hover {
+  opacity: 0.5;
+}
+
+.gallery__img-1, .gallery__img-3 {
+  width: 190px;
+}
+
+.gallery__img-2 {
+  width: 465px;
+}
+
+.gallery__img-4 {
+  width: 500px;
+}
+
+.gallery__img-5, .gallery__img-6 {
+  width: 335px;
+}
+
+.gallery__img-7 {
+  width: 375px;
+}
+
+.gallery__img-8 {
+  width: 300px;
+}
+
+.panel {
+  padding-top: 70px;
+  overflow: hidden;
+}
+
+.panel__block {
+  position: relative;
+  z-index: 2;
+}
+
+.panel__title {
+  font-family: "Montserrat Medium", sans-serif;
+  line-height: 2.5rem;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #01357C;
+  margin-bottom: 45px;
+}
+
+.panel__group {
+  max-width: 566px;
+  margin: 32px auto 30px;
+}
+.panel__group p {
+  margin: 30px 0;
+}
+
+.panel__info {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #07150A;
+}
+
+.panel__desc {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panel__icon {
+  background-image: url(/img/icon-list.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-top: -3px;
+  margin-right: 12px;
+}
+
+.info {
+  padding-top: 170px;
+}
+
+.info__block {
+  display: flex;
+  align-items: center;
+}
+
+.info__media {
+  display: flex;
+  flex-direction: column;
+}
+.info__media p {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #666;
+}
+
+img.info__media__img {
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.info__text {
+  margin-left: 50px;
+}
+
+.info__text-block {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #07150A;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 42px 60px 50px 53px;
+  max-width: 610px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.info__text-block span.info__border {
+  content: "";
+  border-left: 2px solid #346DF1;
+  padding-left: 36px;
+  height: 68%;
+  position: absolute;
+  left: 6%;
+}
+
+.more-link {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #346DF1;
+  position: relative;
+}
+.more-link span {
+  border-bottom: 1px dashed #346DF1;
+  margin-top: 20px;
+}
+
+.certificates {
+  padding-top: 152px;
+  overflow-x: hidden;
+}
+
+.certificates-blocks {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.certificates-blocks h2 {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #01357C;
+  text-transform: uppercase;
+  padding-left: 100px;
+  padding-top: 38px;
+}
+
+.certificates__img {
+  margin-left: 142px;
+  display: flex;
+}
+
+.certificates__img-i {
+  margin-right: 5px;
+}
+
+.partners-ii {
+  padding-top: 130px;
+}
+
+.partners-ii__blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.partners-ii__blocks h2 {
+  font-family: "Montserrat Medium", sans-serif;
+  color: rgba(22, 22, 187, 0.7294117647);
+  text-transform: uppercase;
+  margin-bottom: 43px;
+}
+.partners-ii__blocks p {
+  font-family: "Avenir Next Cyr Light", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 800px;
+  color: #07150A;
+}
+
+.partners-ii__info {
+  margin-top: 35px;
+}
+
+.partners-ii__item {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: center;
+}
+
+.partners-ii__items {
+  width: 195px;
+  height: 174px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.partners-ii__more {
+  margin-top: 33px;
+}
+
+.callback {
+  margin-top: 60px;
+  background: rgba(197, 212, 248, 0.13);
+  padding: 100px 0;
+}
+
+.callback__blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.callback__blocks h2 {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #01357C;
+  margin-bottom: 45px;
+}
+
+.callback__desc {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #07150A;
+  margin-bottom: 40px;
+}
+
+.callback__btn {
+  background: #01357C;
+  box-shadow: 0px 9px 13px -6px rgba(89, 127, 174, 0.47);
+  border-radius: 20px;
+  border: none;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  width: 240px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.95);
+  margin-left: -15px;
+}
+
+.callback__checkbox {
+  display: flex;
+  padding-bottom: 18px;
+  justify-content: space-between;
+}
+
+.callback__phone {
+  width: 350px;
+  background: #FFFFFF;
+  border: 1px solid #EDF1F7;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.checkbox-block {
+  margin-left: 8px;
+}
+
+::placeholder {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #131313;
+  opacity: 0.3;
+  padding-left: 35px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #597FAE;
+}
+.custom-checkbox + label a {
+  color: #597FAE;
+}
+
+.checkbox-term span {
+  border-bottom: 1px dashed #346DF1;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+input::placeholder {
+  color: #282e30;
+}
+
+@media screen and (max-width: 500px) {
+  .callback__checkbox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .callback__btn {
+    margin-top: 20px;
+  }
+  input.callback__phone {
+    height: 40px;
+    width: 85%;
+  }
+}
+.address {
+  padding-top: 100px;
+}
+
+.address__blocks {
+  display: flex;
+  padding: 0 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.address__about {
+  font-family: "Montserrat Black", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #242321;
+}
+
+.address__do {
+  font-family: "Montserrat Black", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+  color: #0088CF;
+  margin-bottom: 22px;
+}
+
+.address__desc {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #242321;
+  margin-bottom: 16px;
+  max-width: 450px;
+}
+
+.address__time {
+  font-family: "Avenir Next Cyr Light", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.address__time:before {
+  content: "";
+  position: absolute;
+  background-color: #2cce65;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+}
+
+.address__phone a {
+  font-family: "Avenir Next Cyr Bold", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.address__email {
+  font-family: "Avenir Next Cyr Bold", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 20px 0px 1px 0;
+}
+.address__email a {
+  color: #000;
+}
+
+.address__address {
+  font-family: "Avenir Next Cyr Bold", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.email-icon {
+  background-image: url(/img/belarus-flag.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 27px;
+  margin-top: -5px;
+  margin-right: -2px;
+}
+
+.footer {
+  padding-top: 60px;
+}
+
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #d3e1f0;
+  padding: 20px 0;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo__title, .footer__copyright {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+
+.footer__icon {
+  background-image: url(/img/olive.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 130px;
+  height: 45px;
+  margin-top: -11px;
+  margin-left: -20px;
+  position: absolute;
+}
+
+.products {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.products__media img {
+  margin-left: 5px;
+}
+
+.products__blocks {
+  max-width: 760px;
+  margin: 0 0 50px 0;
+}
+.products__blocks h2 {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 25px;
+  line-height: 42px;
+  color: #01357C;
+}
+.products__blocks p {
+  font-family: "Avenir Next Cyr Light", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #07150A;
+}
+.products__blocks h3 {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 25px;
+  line-height: 42px;
+  color: #01357C;
+}
+
+.products__media {
+  display: flex;
+  margin-top: 30px;
+}
+
+p.products__info {
+  font-family: "Avenir Next Cyr Light", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.products__item {
+  background: #FFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 2px;
+  width: 299px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  margin-left: 15px;
+  position: relative;
+}
+.products__item p {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.products__item-info {
+  background: rgba(186, 226, 255, 0.21);
+  padding: 0 20px 0 61px;
+  width: 235px;
+  height: 362px;
+}
+
+h4.products__about {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  color: #01357C;
+}
+
+.products__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__icon {
+  background-image: url(/img/shape.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  margin-top: 0px;
+  margin-left: -40px;
+  position: absolute;
+}
+
+.products-table {
+  padding-top: 30px;
+}
+.products-table h2 {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 25px;
+  color: #01357C;
+  margin-bottom: 65px;
+}
+
+.tabs_container {
+  position: relative;
+  margin-top: 30px;
+}
+
+table.iksweb {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: auto;
+  width: 721px;
+  background: #F5F5F9;
+  font-family: "Avenir Next Cyr SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #07150A;
+}
+
+table.iksweb, table.iksweb td, table.iksweb th {
+  border: 1px solid rgba(1, 53, 124, 0.56);
+}
+
+table.iksweb td, table.iksweb th {
+  padding: 3px;
+}
+
+table.iksweb th {
+  background: #347c99;
+  color: #fff;
+  font-weight: normal;
+}
+
+.row {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #01357C;
+  width: 144px;
+  height: 104px;
+}
+
+.row-st {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #666;
+}
+
+.row-w {
+  background: #FFF;
+}
+
+.products-table-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.products-table__item {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.rounded-tab {
+  height: 20px;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-color: #01357C;
+  box-shadow: 5px 5px 15px rgba(111, 115, 238, 0.25);
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 15px;
+  margin: 0 0 0 10px;
+}
+
+.row-set {
+  width: 721px;
+  height: 46px;
+}
+
+.tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li {
+  float: left;
+  margin-right: 2px;
+}
+
+.tabs, #tabs2, #tabs3, #tabs4, #tabs5 {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.tabulousclear {
+  display: block;
+  clear: both;
+}
+
+.tabs_container {
+  position: relative;
+}
+
+.hidescale {
+  transform: scale(0.9);
+  filter: alpha(opacity=0);
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.make_transist {
+  transition: all 0.3s ease-in-out;
+}
+
+.showscale {
+  transform: scale(1);
+  filter: alpha(opacity=100);
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.tabs_container div {
+  margin-right: 40px;
+}
+
+.tabs__btn_active {
+  cursor: default;
+}
+
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
+}
+
+.partners {
+  padding-top: 0px;
+  text-align: center;
+}
+
+.partners h2 {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #01357C;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+}
+
+.partners {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+}
+
+.partners-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* width: 80% */
+  padding: 0 130px;
+}
+
+.partners-info__block {
+  margin-bottom: 1.7em;
+}
+
+.partners-info__title {
+  padding: 10px 0 0 0;
+  background-color: #292970;
+  color: #fff;
+  text-transform: uppercase;
+  height: 35px;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 11px 22.08px 9.92px rgba(145, 168, 189, 0.05);
+}
+
+.partners-info__desc {
+  padding: 1em 0.9em;
+  color: #000;
+  background-color: #fff;
+  text-align: left;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 11px 22.08px 9.92px rgba(145, 168, 189, 0.05);
+}
+
+.partners-info__inner {
+  background-color: #f7fcff !important;
+  border: 1px solid #ebe8e8;
+  padding: 2em 0.9em;
+  text-align: left;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 11px 22.08px 9.92px rgba(145, 168, 189, 0.05);
+}
+
+@media screen and (max-width: 700px) {
+  .partners-info {
+    padding: 0 5%;
+  }
+}
+.contactspp {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #07150A;
+  padding: 0 20%;
+}
+
+.contactspp h2 {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #01357C;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .contactspp {
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 1370px) {
+  .gallery__img-1, .gallery__img-3, .gallery__img-2, .gallery__img-4, .gallery__img-5, .gallery__img-6, .gallery__img-7, .gallery__img-8 {
+    max-width: 100%;
+  }
+  .rounded {
+    display: block;
+    max-width: 100%;
+    min-height: 40%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .ccc {
+    bottom: 57px;
+    right: -285px;
+  }
+}
+@media screen and (max-width: 1005px) {
+  .rounded {
+    max-height: 224px;
+    margin: 0 5px;
+  }
+  .gallery__img-3, .gallery__img-8 {
+    display: none;
+  }
+  .hhh {
+    display: none;
+  }
+  .info__block {
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .info__text {
+    max-width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+  .info__media {
+    margin-bottom: 30px;
+  }
+  .address__address {
+    margin-bottom: 30px;
+  }
+  .address__map {
+    overflow: hidden;
+  }
+}
+.products__item {
+  margin: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  p {
+    line-height: 1.5;
+  }
+  .products-table, .products {
+    padding-top: 0;
+  }
+  .certificates__img {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .certificates__img-i {
+    max-width: 100%;
+  }
+  .partners__items {
+    max-width: 185px;
+    max-height: 148px;
+    margin: 5px;
+  }
+  .ccc {
+    display: none;
+  }
+  .hero__info p {
+    width: 100%;
+  }
+  .hero {
+    padding: 0;
+  }
+  .info {
+    padding-top: 0;
+  }
+  .certificates {
+    padding-top: 67px;
+  }
+  .certificates-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .xxx {
+    display: none !important;
+  }
+  .certificates-blocks h2 {
+    padding: 0;
+  }
+  .partners {
+    padding-top: 80px;
+  }
+  .callback__phone {
+    width: 100%;
+  }
+  .callback__btn {
+    padding: 9px 1px;
+    font-size: 15px;
+    height: auto;
+  }
+  .ball_abs {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  ul.products-table__item li a {
+    display: block;
+    margin: 8px 0 0 10px;
+    display: block;
+  }
+  .products-g {
+    display: none;
+  }
+  .products__media img {
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .callback {
+    margin-top: 30px;
+    padding: 40px 0;
+  }
+  .certificates {
+    padding-top: 30px;
+  }
+  .info__text {
+    max-width: 100%;
+  }
+  .info__text-block {
+    line-height: 25px;
+    padding: 30px 25px;
+  }
+  .info__text-block span, .more-link span {
+    display: none;
+  }
+  .logo__title {
+    display: none;
+  }
+  .callback__btn {
+    max-width: 240px;
+    max-height: 58px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .callback__phone {
+    box-sizing: border-box;
+  }
+  ::placeholder {
+    font-size: 15px;
+    line-height: 28px;
+    padding-left: 5px;
+  }
+  .partners__items-up {
+    display: none;
+  }
+  .partners__items {
+    margin: 1%;
+    width: 120px;
+    height: 110px;
+  }
+  .partners__items img {
+    display: block;
+    max-width: 70%;
+  }
+  .rounded {
+    max-height: 170px;
+  }
+  .certificates__img {
+    margin-left: 0;
+  }
+  .info__media {
+    max-width: 90%;
+  }
+  .panel__group p {
+    margin: 15px 0;
+  }
+  .panel, .address, .footer, .partners {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 479.98px) {
+  .custom-checkbox + label {
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .footer__block {
+    padding: 10px 0;
+  }
+  .container {
+    max-width: 90%;
+  }
+  h2.hero__title, .panel__title, .certificates-blocks h2, .partners__blocks h2, .callback__blocks h2 {
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+    margin-bottom: 31px;
+  }
+  .panel__desc {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 450px) {
+  .callback {
+    margin-top: 0;
+    padding: 50px 0;
+  }
+  .rounded {
+    border-radius: 10px;
+    max-height: 170px;
+  }
+  .gallery__block {
+    padding: 0 5px;
+    width: auto;
+  }
+  .gallery {
+    padding-top: 25px;
+  }
+  .hero__info p {
+    font-size: 18px;
+  }
+  .panel {
+    padding-top: 45px;
+  }
+  .fff {
+    bottom: -55px !important;
+    left: 40% !important;
+  }
+  .callback__desc {
+    margin-bottom: 28px;
+  }
+  .address__about {
+    font-size: 27px;
+  }
+  .address__do {
+    font-size: 27px;
+  }
+}
