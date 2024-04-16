@@ -26,7 +26,15 @@
 	                resultField.style.display = 'none';
 	                copyButton.style.display = 'none';
 	            }
-	
+				if (category === 'Прицепы') {
+	                fridgeDetails.style.display = 'block';
+	                resultField.style.display = 'block';
+	                copyButton.style.display = 'block';
+	            } else {
+	                fridgeDetails.style.display = 'none';
+	                resultField.style.display = 'none';
+	                copyButton.style.display = 'none';
+	            }
 	            resultField.value = ''; // Clear field when category changes
 	        }
 	
@@ -69,6 +77,7 @@
         <option value="none">Выберите категорию</option>
         <option value="Холодильники">Холодильники</option>
         <option value="Стиралки">Стиралки</option>
+		<option value="Стиралки">Прицепы</option>
     </select>
 	<div id="fridgeDetails" style="display:none">
 		<h3>Высота холодильника</h3> <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5">
@@ -80,19 +89,39 @@
 		<input type="checkbox" id="chamber4" name="chambers" value="4 камеры" onchange="updateResult()"> 4 камеры<br> </div> 
 
 
-<h3>Как планируете оплачивать</h3> 
+	<h3>Как планируете оплачивать</h3>
 		<input type="checkbox" id="chamber11" name="chambers" value="рассрочка" onchange="updateResult()">рассрочка<br> 
 		<input type="checkbox" id="chamber22" name="chambers" value="кредит" onchange="updateResult()"> кредит<br> 
-		
 		<input type="checkbox" id="chamber33" name="chambers" value="наличными" onchange="updateResult()">наличными<br> <br> 
 		<input type="checkbox" id="chamber44" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br> 
-		</div> 
+</div>
 
 		<textarea id="resultField" onclick="this.focus();this.select()"></textarea>
-		
 		<button id="copyButton" onclick="copyResult()" style="display:none">Копировать</button> </body>
 	
 
+
+
+
+
+	<div id="fridgeDetails" style="display:none">
+		<h3>Длина</h3> <input type="range" id="fridgeHeight" min="0.5" max="3" step="0.1" onchange="updateResult()" value="0.5">
+		<h3>Ширина</h3> <input type="range" id="fridgeHeight" min="0.5" max="3" step="0.1" onchange="updateResult()" value="0.5">
+		<h3>Прицеп для</h3>
+		<input type="checkbox" id="chamber1" name="chambers" value="для автомобиля" onchange="updateResult()"> для автомобиля<br> 
+		<input type="checkbox" id="chamber2" name="chambers" value="для лодки" onchange="updateResult()"> для лодки<br> 
+</div> 
+
+
+	<h3>Как планируете оплачивать</h3>
+		<input type="checkbox" id="chamber11" name="chambers" value="рассрочка" onchange="updateResult()">рассрочка<br> 
+		<input type="checkbox" id="chamber22" name="chambers" value="кредит" onchange="updateResult()"> кредит<br> 
+		<input type="checkbox" id="chamber33" name="chambers" value="наличными" onchange="updateResult()">наличными<br> <br> 
+		<input type="checkbox" id="chamber44" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br> 
+</div>
+
+		<textarea id="resultField" onclick="this.focus();this.select()"></textarea>
+		<button id="copyButton" onclick="copyResult()" style="display:none">Копировать</button> </body>
 
 
 </html>
